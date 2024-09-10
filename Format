@@ -1,0 +1,17 @@
+
+#include <conio.h>
+#include <math.h>
+#include <stdio.h>
+int main()
+{
+    int
+    char
+    printf("");
+    scanf("");
+
+
+
+
+
+    return 0;
+}
