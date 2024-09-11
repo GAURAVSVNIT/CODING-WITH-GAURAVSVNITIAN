@@ -124,7 +124,7 @@ int main()
 {
     int i,j,n;
 
-    printf("Enter the Number :  g");
+    printf("Enter the Number :  ");
     scanf("%d",&n);
     
     
