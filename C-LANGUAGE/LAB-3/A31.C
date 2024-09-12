@@ -1,3 +1,5 @@
+//31. PROGRAM TO PRINT SUM OF INDIVIDUAL DIGITS OF A ‘N’ DIGIT NO.
+
 #include <stdio.h>
 int main()
 {

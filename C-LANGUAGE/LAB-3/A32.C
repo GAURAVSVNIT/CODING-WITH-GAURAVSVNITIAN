@@ -1,70 +1,46 @@
 //32. PROGRAM TO FINDOUT MAX AND SECOND MAX FROM ‘N’ NOS .
 
-#include <stdio.h>
+ #include <stdio.h>
 #include <limits.h>
 
-void findMaxAndSecondMax(int arr[], int n, int *max, int *secondMax) 
-{
-    if (n < 2) 
-    {
-        printf("Not enough elements to find both max and second max.\n");
-        return;
+int main() {
+    int N, i;
+    int num;
+    int max = INT_MIN, second_max = INT_MIN;
+
+    // Prompt the user to enter the number of elements
+    printf("Enter the number of elements: ");
+    scanf("%d", &N);
+
+    if (N < 2) {
+        printf("The number of elements should be at least 2.\n");
+        return 1; // Exit the program with an error code
     }
 
-    *max = INT_MIN;
-    *secondMax = INT_MIN;
+    // Read the first number to initialize max and second_max
+    printf("Enter element 1: ");
+    scanf("%d", &num);
+    max = num;
+    second_max = INT_MIN; // Initialize second_max for comparison
 
-    for (int i = 0; i < n; i++) 
-    {
-        if (arr[i] > *max) 
-        {
-            *secondMax = *max;
-            *max = arr[i];
-        } else if (arr[i] > *secondMax && arr[i] != *max) {
-            *secondMax = arr[i];
+    // Process the remaining numbers
+    for (i = 1; i < N; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &num);
+
+        if (num > max) {
+            second_max = max;
+            max = num;
+        } else if (num > second_max && num < max) {
+            second_max = num;
         }
     }
 
-    // If secondMax is still INT_MIN, it means there was no valid second maximum
-    if (*secondMax == INT_MIN) 
-    {
-        printf("All elements are the same or not enough distinct elements to find second max.\n");
-    }
-}
-
-int main() 
-{
-    int n;
-
-    // Input the number of elements
-    printf("Enter the number of elements: ");
-    scanf("%d", &n);
-
-    if (n < 2) 
-    {
-        printf("You need at least two numbers to find both max and second max.\n");
-        return 1;
-    }
-
-    int arr[n];
-
-    // Input the elements
-    printf("Enter the elements:\n");
-    for (int i = 0; i < n; i++) 
-    {
-        scanf("%d", &arr[i]);
-    }
-
-    int max, secondMax;
-
-    // Find max and second max
-    findMaxAndSecondMax(arr, n, &max, &secondMax);
-
-    // Print the results
-    printf("Maximum value: %d\n", max);
-    if (secondMax != INT_MIN) 
-    {
-        printf("Second maximum value: %d\n", secondMax);
+    if (second_max == INT_MIN) {
+        printf("There is no second maximum value.\n");
+    } else {
+        printf("Maximum value: %d\n", max);
+        printf("Second maximum value: %d\n", second_max);
     }
 
     return 0;
