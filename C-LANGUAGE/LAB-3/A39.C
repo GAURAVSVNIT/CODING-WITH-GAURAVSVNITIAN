@@ -14,7 +14,7 @@ int main()
     // Loop to calculate the sum of the series
     for (int i = 1; i <= N; i++) 
     {
-        long long fact = 1;  // Initialize factorial for each i
+        long fact = 1;  // Initialize factorial for each i
 
         // Calculate factorial of i
         for (int j = 1; j <= i; j++) 
@@ -27,7 +27,7 @@ int main()
     }
 
     // Print the result
-    printf("The sum of the series is: %.6f\n", sum);
+    printf("The sum of the series is: %f\n", sum);
 
     return 0;
 }

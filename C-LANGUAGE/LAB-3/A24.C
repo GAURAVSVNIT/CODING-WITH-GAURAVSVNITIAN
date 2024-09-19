@@ -8,45 +8,35 @@
 
 #include <stdio.h>
 
-// Function to calculate Y(x, n) based on the given value of n
-double calculateY(double x, int n) 
-{
-    double y;
-    
-    if (n == 1) {
-        y = 1 + x;
-    } else if (n == 2) {
-        y = 1 + x / 2.0;
-    } else if (n == 3) {
-        y = 1 + x * x * x;
-    } else if (n > 3 || n < 1) {
-        y = 1 + n * x;
-    } else {
-        // This else is technically unnecessary because all cases are covered
-        y = 0; // Default case
-    }
-
-    return y;
-}
-
 int main() 
 {
-    double x;
+    float x, y;
     int n;
 
     // Input x and n
     printf("Enter the value of x: ");
-    scanf("%lf", &x);
+    scanf("%f", &x);
     printf("Enter the value of n: ");
     scanf("%d", &n);
 
+    // Calculate y based on the value of n
+    if (n == 1) 
+    {
+        y = 1 + x;
+    } else if (n == 2) 
+    {
+        y = 1 + x / n;
+    } else if (n == 3) 
+    {
+        y = 1 + x * n;
+    } else 
+    { // n > 3 or n < 1
+        y = 1 + n * x;
+    }
 
-
-
-
-    // Calculate and print the result
-    double result = calculateY(x, n);
-    printf("The value of Y(x, %d) is: %.2lf\n", n, result);
+    // Output the result
+    printf("The value of Y(x, n) is: %f\n", y);
 
     return 0;
 }
+

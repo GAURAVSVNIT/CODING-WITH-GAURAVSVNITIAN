@@ -1,53 +1,43 @@
+
 //28. PROGRAM TO CHECK WHETHER A NO IS ARMSTRONG OR NOT.
+
 #include <stdio.h>
 #include <math.h>
 
-// Function to count the number of digits in a number
-int countDigits(int num) 
+int main()
 {
-    int count = 0;
-    while (num != 0) 
+   long int num,count=0,q,org_num,sum=0;
+
+   printf("Enter the Number : ");
+   scanf("%ld",&num);
+    
+   org_num=num;
+
+   fflush(stdin);
+
+   while(num!=0)
+   {
+     count++;
+     num/=10;
+   }
+    num=org_num;
+
+    while(num!=0)
     {
-        num /= 10;
-        count++;
+        q=num%10;
+        sum=sum+pow(q,count);
+        num/=10;
     }
-    return count;
-}
-
-// Function to check if a number is an Armstrong number
-int isArmstrong(int num) 
-{
-    int originalNum = num;
-    int digits = countDigits(num);
-    int sum = 0;
-
-    // Calculate the sum of each digit raised to the power of the number of digits
-    while (num != 0) 
+    
+    if(sum==org_num)
     {
-        int digit = num % 10;
-        sum += pow(digit, digits);
-        num /= 10;
+        printf("The Number %ld is Armstrong Number",org_num);
     }
-
-    return (sum == originalNum);
-}
-
-int main() {
-    int number;
-
-    // Input number
-    printf("Enter a number: ");
-    scanf("%d", &number);
-
-    // Check if the number is an Armstrong number and display the result
-    if (isArmstrong(number)) 
+    
+    else
     {
-        printf("%d is an Armstrong number.\n", number);
-    } 
-    else 
-    {
-        printf("%d is not an Armstrong number.\n", number);
+        printf("The Number %ld is Not Armstrong Number",org_num);
     }
-
+    
     return 0;
 }

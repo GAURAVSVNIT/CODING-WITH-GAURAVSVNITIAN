@@ -4,10 +4,12 @@
 #include <stdio.h>
 int main()
 {
-    int n,i,a,sum=0,k;
-    printf("Enter the Number : ");
+    int n,i,a,sum=0,k; //Declaring the Variables
+    printf("Enter the Number : "); 
     scanf("%d",&n);
+
       k=n;
+      
     for(i=1;n!=0;i++)
     {
       a=n%10;

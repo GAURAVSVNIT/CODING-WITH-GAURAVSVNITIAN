@@ -13,7 +13,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int units;
     float amount;
 
@@ -22,13 +23,20 @@ int main() {
     scanf("%d", &units);
 
     // Calculate the amount based on the number of units
-    if (units <= 200) {
+    if (units <= 200) 
+    {
         amount = 0.50 * units;
-    } else if (units <= 400) {
+    } 
+    else if (units <= 400) 
+    {
         amount = 100 + 0.65 * (units - 200);
-    } else if (units <= 600) {
+    } 
+    else if (units <= 600) 
+    {
         amount = 230 + 0.80 * (units - 400);
-    } else {
+    } 
+    else 
+    {
         amount = 425 + 1.25 * (units - 600);
     }
 

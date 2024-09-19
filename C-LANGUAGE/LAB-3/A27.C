@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int i,num,check;
+    int i,num,check; //Declaring the Variables
     printf("Enter the Number: ");
     scanf("%d",&num);
 
