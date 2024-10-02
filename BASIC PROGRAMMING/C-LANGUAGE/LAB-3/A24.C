@@ -23,13 +23,16 @@ int main()
     if (n == 1) 
     {
         y = 1 + x;
-    } else if (n == 2) 
+    } 
+    else if (n == 2) 
     {
         y = 1 + x / n;
-    } else if (n == 3) 
+    } 
+    else if (n == 3) 
     {
         y = 1 + x * n;
-    } else 
+    } 
+    else 
     { // n > 3 or n < 1
         y = 1 + n * x;
     }

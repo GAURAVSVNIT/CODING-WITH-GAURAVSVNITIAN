@@ -4,16 +4,16 @@
 
 int main()
 {
-    int n,i,a,b,c; //Declaring the Variables
+    long int  n,i,a,b,c; //Declaring the Variables
     printf("Enter the Number : ");
     scanf("%d",&n);
     a=0;
     b=1;
-    printf("%d %d ",a,b);
+    printf("%ld %ld ",a,b);
     for(i=3;i<=n;i++)
     {
         c=a+b;
-        printf("%d ",c);
+        printf("%ld ",c);
         a=b;
         b=c;
     }

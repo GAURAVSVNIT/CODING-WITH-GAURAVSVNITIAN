@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int n, i;
     int num, max, min;
 
@@ -10,7 +11,8 @@ int main() {
     printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    if (n <= 0) {
+    if (n <= 0) 
+    {
         printf("The number of elements must be greater than 0.\n");
         return 1;
     }
@@ -21,15 +23,18 @@ int main() {
     max = min = num; // Initialize max and min with the first number
 
     // Input remaining numbers and find max and min
-    for (i = 2; i <= n; i++) {
+    for (i = 2; i <= n; i++) 
+    {
         printf("Enter number %d: ", i);
         scanf("%d", &num);
 
-        if (num > max) {
+        if (num > max) 
+        {
             max = num;
         }
 
-        if (num < min) {
+        if (num < min) 
+        {
             min = num;
         }
     }

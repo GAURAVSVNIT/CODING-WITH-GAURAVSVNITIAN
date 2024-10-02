@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 int main() 
-{
-    int a, b, temp;
+{   
+    int a, b,temp;   
 
     // Input values for a and b
     printf("Enter the value of a: ");
@@ -25,3 +25,7 @@ int main()
 
     return 0;
 }
+
+    int a, b, temp;
+
+    // In

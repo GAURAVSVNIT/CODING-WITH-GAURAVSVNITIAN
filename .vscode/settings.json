@@ -1,15 +1,15 @@
 {
     "files.associations": {
-        "ZXZ.C": "cpp",
-        "ZZ.C": "cpp",
-        "tempCodeRunnerFile.C": "cpp",
-        "A44.C": "cpp",
-        "A45.C": "cpp",
-        "A43.C": "cpp",
-        "A39.C": "cpp",
-        "wad.C": "cpp",
-        "A31.C": "cpp",
-        "A37.C": "cpp",
-        "A41.C": "cpp"
+        "A50.C": "cpp",
+        "A52.C": "cpp",
+        "A53.C": "cpp",
+        "A32.C": "cpp",
+        "A54.C": "cpp",
+        "A47.C": "cpp",
+        "A48-1.C": "cpp",
+        "A48-2.C": "cpp",
+        "A49.C": "cpp",
+        "A66.C": "cpp",
+        "A2.C": "cpp"
     }
 }
