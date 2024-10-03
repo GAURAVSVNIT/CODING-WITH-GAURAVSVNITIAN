@@ -3,46 +3,52 @@
 // statements. I’ve also thrown in a conditional operator, just to make sure you 
 // haven’t forgotten how to use it!
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+#include<stdio.h>  // Include standard input/output library
+#include<stdlib.h> // Include standard library for srand and rand functions
+#include<time.h>   // Include time library for seeding random number generator
 
 int main()
 {
-    const int MIN=1;
-    const int MAX=100;
+    // Define constants for minimum and maximum values
+    const int MIN = 1;
+    const int MAX = 100;
 
-
+    // Seed random number generator with current time
     srand(time(0));
 
-    int guessed,generated,count=0;
-    generated = (rand() % MAX) +MIN;
+    // Declare variables for guessed number, generated number, and attempt count
+    int guessed, generated, count = 0;
 
-    do{
-    printf("\nGuess any number between 1-100:");
-    scanf("%d",&guessed);
+    // Generate a random number between MIN and MAX
+    generated = (rand() % MAX) + MIN;
 
-    if(guessed>100 || guessed<1)
-    {
-        printf("You guessed out of the range!!\n");
-        count++;
-    }
+    // Loop until the user guesses the correct number
+    do {
+        // Prompt user to guess a number
+        printf("\nGuess any number between 1-100: ");
+        scanf("%d", &guessed);
 
-    else if(guessed>generated)
-    {
-        printf("TOO High!!!\n");
-        count++;
-    }
-    else if(guessed<generated)
-    {
-        printf("TOO Low!!!\n");
-        count++;
-    }
-    else
-    {
-        printf("Congratulations!!!!!!\nYou guessed the correct number\nWhich was : %d in %d tries\n",guessed,count);
-        break;
-    }
-    }while(guessed!=generated);
+        // Check if user's guess is out of range
+        if (guessed > 100 || guessed < 1) {
+            printf("You guessed out of the range!!\n");
+            count++;
+        }
+        // Check if user's guess is too high
+        else if (guessed > generated) {
+            printf("TOO High!!!\n");
+            count++;
+        }
+        // Check if user's guess is too low
+        else if (guessed < generated) {
+            printf("TOO Low!!!\n");
+            count++;
+        }
+        // If user guesses correctly, congratulate and exit loop
+        else {
+            printf("Congratulations!!!!!!\nYou guessed the correct number\nWhich was : %d in %d tries\n", guessed, count);
+            break;
+        }
+    } while (guessed != generated);
+
     return 0;
 }
