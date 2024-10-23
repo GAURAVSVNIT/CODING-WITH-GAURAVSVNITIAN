@@ -29,26 +29,31 @@ int main()
         scanf("%d", &guessed);
 
         // Check if user's guess is out of range
-        if (guessed > 100 || guessed < 1) {
+        if (guessed > 100 || guessed < 1) 
+        {
             printf("You guessed out of the range!!\n");
             count++;
         }
         // Check if user's guess is too high
-        else if (guessed > generated) {
+        else if (guessed > generated) 
+        {
             printf("TOO High!!!\n");
             count++;
         }
         // Check if user's guess is too low
-        else if (guessed < generated) {
+        else if (guessed < generated) 
+        {
             printf("TOO Low!!!\n");
             count++;
         }
         // If user guesses correctly, congratulate and exit loop
-        else {
+        else 
+        {
             printf("Congratulations!!!!!!\nYou guessed the correct number\nWhich was : %d in %d tries\n", guessed, count);
             break;
         }
-    } while (guessed != generated);
+    } 
+        while (guessed != generated);
 
     return 0;
 }

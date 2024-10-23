@@ -119,3 +119,18 @@
 // printf("%d",d);
 // return 0;
 // }
+
+#include <stdio.h>
+int main()
+{
+    int a=0;
+    if(scanf("%d",&a))
+    {
+        printf("AI");
+    }
+    else
+    {
+        printf("CSE");
+    }
+    return 0;
+}

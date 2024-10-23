@@ -14,7 +14,7 @@ int main()
     // Calculate the number of hours
     hours = total_seconds / 3600; // 1 hour = 3600 seconds
     total_seconds = total_seconds % 3600;
-
+    
     // Calculate the number of minutes
     minutes = total_seconds / 60; // 1 minute = 60 seconds
 
