@@ -493,3 +493,272 @@
 // }
 
 
+// # include <stdio.h>
+// # include<string.h>
+// int main()
+// {
+//     char str[100],san[100][100];
+//     int i=0,j=0,k,minLen = 100, maxLen = 0;
+//     printf("Enter the string :");
+//     gets(str);
+    
+//     for(k=0;str[k]!='\0';k++)
+//     {
+//         if(str[k]==' ')
+//         {
+//             san[i][j]='\0';
+//             i++;
+//             j=0;
+//         }
+
+//         else
+//         {
+//             san[i][j]=str[k];
+//             j++;
+//         }
+//     }
+
+//     san[i][j]='\0';
+//     char* minWord = san[0];
+//     char* maxWord = san[0];
+
+//     for (k = 0; k <= i; k++) 
+//     {
+//         int len = strlen(san[k]);
+//         if (len < minLen) 
+//         {
+//             minLen = len;
+//             minWord = san[k];
+//         }
+//         if (len > maxLen) 
+//         {
+//             maxLen = len;
+//             maxWord = san[k];
+//         }
+//     }
+//     printf("The largest word is %s and smallest word is %s", maxWord, minWord);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char str[100],wor[100],lon[100];
+//     int i=0,j=0,k;
+//     printf("Enter the string :");
+//     gets(str);
+//     printf("The Sentence is :");
+//     puts(str);    
+//     i=strlen(str);
+//     j=0;
+//     while(i<1)
+//     {
+//         char ch = str[i];
+//         if(ch==' ' || ch=='\n')
+//         {
+//         strcpy(lon,wor);
+//         }
+//         strcpy(wor,"");
+//         if(j==0)
+//         {
+//         lon[j]=ch;
+//         j++;
+//         }
+//         else
+//         {
+//         wor[j]=ch;
+//         j++;
+//         }
+//         i++;
+//     }
+//     printf("The Longest word is ");
+//     puts(lon);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//     char str[100], wor[100], lon[100];
+//     int i = 0, j = 0, k;
+//     printf("Enter the string: ");
+//     fgets(str, sizeof(str), stdin);
+
+//     printf("The Sentence is: ");
+//     puts(str);
+
+//     i = strlen(str);
+//     j = 0;
+
+//     while (i >= 0) {
+//         char ch = str[i];
+//         if (ch == ' ' || ch == '\n') 
+//         {
+//             wor[j] = '\0'; 
+//             if (j > strlen(lon)) 
+//             {
+//                 strcpy(lon, wor);
+//             }
+//             j = 0;
+//         } 
+//         else 
+//         {
+//             wor[j] = ch;
+//             j++;
+//         }
+//         i--;
+//     }
+
+//     printf("The Longest word is: ");
+//     puts(lon);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int isFibo(int n) 
+// {
+//     int a = 0, b = 1, c;
+//     while (a <= n) 
+//     {
+//         if (a == n) 
+//         {
+//             return 1; // Is a Fibonacci number
+//         }
+//         c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return 0; // Not a Fibonacci number
+// }
+
+// int main() 
+// {
+//     int t, n;
+
+//     printf("Enter the number of test cases: ");
+//     scanf("%d", &t);
+
+//     while (t--) 
+//     {
+//         printf("Enter the number: ");
+//         scanf("%d", &n);
+//         if (isFibo(n)) 
+//         {
+//             printf("IsFibo\n");
+//         } 
+//         else 
+//         {
+//             printf("IsNotFibo\n");
+//         }
+//     }
+
+//     return 0;
+// }
+
+// # include <stdio.h>
+// # include <string.h>
+
+// int main()
+// {
+//     char str[584];
+//     int l=strlen(str);
+//     printf("\n%d",l);
+//     printf("\n%s",str[1]);
+//     printf("\n%c",str[0]);
+//     printf("\n%c",str[2]);
+//     printf("\n%c",str[3]);
+//     printf("\n%c",str[4]);
+//     printf("\n%c",str[5]);
+//     printf("\n%c",str[6]);
+//     printf("\n%c",str[7]);
+//     printf("\n%c",str[8]);
+//     printf("\n%c",str[10]);
+// }
+// #include <stdio.h>
+
+// int main() {
+//     int arr[] = {4, 34, 25, 12, 22, 11, 90};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     int i, j, temp;
+
+//     printf("Original array: \n");
+//     for (i = 0; i < n; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     for (i = 0; i < n - 1; i++) {
+//         for (j = 0; j < n - i - 1 ; j++) {
+//             if (arr[j] < arr[j + 1]) {
+//                 temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+
+//     printf("Sorted array: \n");
+//     for (i = 0; i < n; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+//     printf("%d", arr[7]);
+
+//     return 0;
+// }
+// # include <stdio.h>
+
+// int main() 
+// {
+//     int n1,n2, *ptr1, *ptr2,sum;
+//     n1=10;
+//     n2=20;
+//     ptr1 = &n1;
+//     ptr2 = &n2;
+//     sum = *ptr1 + *ptr2;
+//     printf("%d",sum);
+//     return 0;
+//}
+// # include <string.h>
+// # include <stdio.h>
+
+// int main()
+// {
+//     char str[100]="My name is Gaurav";
+//     printf("%d",strlen(strrchr(str,' ')+1));
+//     return 0;
+    
+// }   
+#include<stdio.h>
+int main()
+{
+    int n,sum=0;
+    float avg;
+    printf("Please enter the array length: ");
+    scanf("%d",&n);
+    int a[n],b[n],c[n];
+    printf("The first array is :\n");
+    for(int i=0;i<=n-1;i++)
+        {
+            scanf("%d",&a[i]);
+        }
+    printf("The second array is :\n");
+    for(int i=0;i<n;i++)
+       {
+        scanf("%d",&b[i]);
+       } 
+    printf("The new array would be\n");   
+    for(int i=0;i<n;i++)
+    {
+        c[i]=a[i]+b[i];
+        sum+=c[i];
+        printf("%d\n",c[i]);
+    }   
+    avg=sum/3.0;
+    printf("The average of the new array is %.2f",avg);
+    return 0;  
+}
