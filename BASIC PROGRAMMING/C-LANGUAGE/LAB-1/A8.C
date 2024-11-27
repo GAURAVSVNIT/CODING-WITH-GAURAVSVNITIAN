@@ -10,7 +10,7 @@ int main()
     // Calculate the number of days
     days = total_seconds / 86400; // 1 day = 86400 seconds
     total_seconds = total_seconds % 86400;
-
+    
     // Calculate the number of hours
     hours = total_seconds / 3600; // 1 hour = 3600 seconds
     total_seconds = total_seconds % 3600;

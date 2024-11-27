@@ -21,13 +21,20 @@ int main()
     // Print the division based on average marks
     printf("Average marks: %.2f\n", average);
     
-    if (average >= 60) {
+    if (average >= 60) 
+    {
         printf("Division: First Division\n");
-    } else if (average >= 50) {
+    } 
+    else if (average >= 50) 
+    {
         printf("Division: Second Division\n");
-    } else if (average >= 40) {
+    } 
+    else if (average >= 40) 
+    {
         printf("Division: Third Division\n");
-    } else {
+    } 
+    else 
+    {
         printf("Division: Fail\n");
     }
 

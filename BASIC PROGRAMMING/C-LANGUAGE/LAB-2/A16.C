@@ -18,10 +18,12 @@ int main()
     // Determine the maximum number
     max = num1; // Assume num1 is the maximum initially
 
-    if (num2 > max) {
+    if (num2 > max) 
+    {
         max = num2; // Update max if num2 is greater
     }
-    if (num3 > max) {
+    if (num3 > max) 
+    {
         max = num3; // Update max if num3 is greater
     }
 

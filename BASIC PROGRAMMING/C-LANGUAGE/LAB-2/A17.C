@@ -16,11 +16,16 @@ int main()
     scanf("%d", &num3);
 
     // Determine the maximum number using logical operators
-    if ((num1 >= num2) && (num1 >= num3)) {
+    if ((num1 >= num2) && (num1 >= num3)) 
+    {
         max = num1; // num1 is greater than or equal to both num2 and num3
-    } else if ((num2 >= num1) && (num2 >= num3)) {
+    } 
+    else if ((num2 >= num1) && (num2 >= num3)) 
+    {
         max = num2; // num2 is greater than or equal to both num1 and num3
-    } else {
+    } 
+    else 
+    {
         max = num3; // num3 is greater than or equal to both num1 and num2
     }
 

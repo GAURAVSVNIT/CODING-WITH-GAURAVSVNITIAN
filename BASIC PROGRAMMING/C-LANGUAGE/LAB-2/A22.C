@@ -12,11 +12,15 @@ int main()
     scanf("%d", &num);
 
     // Check if the number is negative
-    if (num < 0) {
+    if (num < 0) 
+    {
         printf("Error! Factorial of a negative number doesn't exist.\n");
-    } else {
+    } 
+    else 
+    {
         // Calculate the factorial using an iterative approach
-        for (i = 1; i <= num; ++i) {
+        for (i = 1; i <= num; ++i) 
+        {
             factorial *= i;  // factorial = factorial * i
         }
         // Print the result

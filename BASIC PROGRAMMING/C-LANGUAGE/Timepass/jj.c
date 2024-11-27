@@ -583,7 +583,7 @@
 // int main() {
 //     char str[100], wor[100], lon[100];
 //     int i = 0, j = 0, k;
-//     printf("Enter the string: ");
+//     printf("Enter the string: ");'
 //     fgets(str, sizeof(str), stdin);
 
 //     printf("The Sentence is: ");
@@ -733,32 +733,195 @@
 //     return 0;
     
 // }   
-#include<stdio.h>
-int main()
-{
-    int n,sum=0;
-    float avg;
-    printf("Please enter the array length: ");
-    scanf("%d",&n);
-    int a[n],b[n],c[n];
-    printf("The first array is :\n");
-    for(int i=0;i<=n-1;i++)
-        {
-            scanf("%d",&a[i]);
-        }
-    printf("The second array is :\n");
-    for(int i=0;i<n;i++)
-       {
-        scanf("%d",&b[i]);
-       } 
-    printf("The new array would be\n");   
-    for(int i=0;i<n;i++)
-    {
-        c[i]=a[i]+b[i];
-        sum+=c[i];
-        printf("%d\n",c[i]);
-    }   
-    avg=sum/3.0;
-    printf("The average of the new array is %.2f",avg);
-    return 0;  
-}
+// 
+
+// #include <stdio.h>
+// #include<string.h>
+// int main(){
+//     int N;
+//     printf("Enter no of rocks:");scanf("%d",&N);
+//     if(N>=1 && N<=100){
+//         char arr[N][100];
+//         int i=0,c,sum=0;
+//         while(i<N){
+//             scanf("%s",arr[i]);
+//             c=0;
+//             if(strlen(arr[i])>=0 && strlen(arr[i])<=100){
+//                 for(int j=0;arr[i][j]!='\0';j++){
+//                     if(arr[i][j]>='a' && arr[i][j]<='z')c++;
+//                 }
+//                 if(c==strlen(arr[i]))i++;
+//             }
+//         }
+
+//         for(i=0;i<strlen(arr[0]);i++){
+//             c=0;
+//             for(int j=1;j<N;j++){
+//                 if(strchr(arr[j],arr[0][i])!='\0')c++;
+//                 else break;
+//             }
+//             if(c==N-1)
+//             sum++;
+//         }
+
+//         printf("%d",sum);
+//     }
+//     else return 0;
+// }
+
+// # include <stdio.h>
+// # include <string.h>
+// int main() {
+//     char str1[100];
+//     char str2[100];
+//     // char str3[100];
+//     // char str4[100] = " ";
+//     // char str5[100] = " ";
+//     // char str6[100] = " ";
+//     // char str7[100];
+//     printf("enter the main string:");
+//     gets(str1);
+//     printf("enter the word to be found:");
+//     gets(str2);
+//     // printf("enter the word to be replaced with:");
+//     // gets(str3);
+//     // strcat(str1, " ");
+//     // strcat(str4, str1);
+//     // strcat(str2, " ");
+//     // strcat(str5, str2);
+//     // strcat(str3, " ");
+//     // strcat(str6, str3);
+
+// //     while(strstr(str4, str5) != NULL) {
+
+// // }
+// char *x = strstr(str1,str2);
+// printf("%s",x);
+//     return 0;
+// }
+
+// # include <stdio.h>
+// # include <string.h>
+// int main()
+// {
+//     int arr[5];
+//     scanf("%d",&arr[0]);
+//     printf("%d",arr[0]);
+// }
+// 
+// # include <stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d",&n);
+    
+//     for(int i=0;i<n;i++)
+//     {
+//         for(int j=0;j<n;j++)
+//         {
+//             if(j == n/2 || i == n/2)
+//                 printf("*");
+//             else
+//                 printf(" ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+// {
+//     int n;
+//     scanf("%d",&n);
+//     int nsp = n-1;
+//     int nst = 1;
+//     for(int i=0;i<n;i++)
+//     {
+//         for(int j=0;j<nsp;j++)
+//         {
+//             printf(" ");
+//         }
+//         nsp--;
+//         for(int j=0;j<nst;j++)
+//         {
+//             printf(" *");
+//         }
+//         nst++;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+// 
+
+//  # include <stdio.h>
+//  int main()
+// {
+// double x = 0; 
+// double *p = &x;
+// printf("%d", sizeof(p));
+// return 0;
+// }70617
+//# include<stdio.h>
+//int main()
+//{
+//char *str = "World";
+//str[0] = 'w';
+//printf("%s", str);
+//}
+// 
+
+// #include<stdio.h>
+// // struct Ournode
+// // {
+// //     char x,y,z;
+// // };
+// int main()
+// { 
+//     int a[]={2,4,6,8,10};
+//     int i,sum=0,*b = a+4;
+
+//     for(i=0;i<5;i++)
+//     {
+//         sum+=(*b-i)- *(b-i);
+//     }
+//     printf("%d",sum);
+    
+//     //printf("%c,%c",*((char*)q+1),*((char*)q+2));
+//     return 0;
+// }
+// #include <stdio.h>
+// int main()
+// {
+//     char str[] = "LearningCProgramming";
+//     char *ptr = str;
+
+//     printf("%s\n", ptr + 9); // Pointer shifting to print a substring
+//     return 0;
+// }
+// #include <stdio.h>
+// int main()
+// {
+//     int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};
+//     int *p = &arr[0][0];
+//     printf("%d %d\n", *(p + 4), *(*(arr + 1) + 2));
+//     return 0;
+// }
+// # include <stdio.h>
+// int main()
+
+// }{
+//     m();
+//     return 0;
+// }
+// void m()
+// {
+//     printf("Hello");
+//     m();
+// }
+
+// # include <stdio.h>
+// int main()
+// {
+//     int arr[5];
+//     int *ip = arr+4;
+//     printf("%d",sizeof(ip));
+// }

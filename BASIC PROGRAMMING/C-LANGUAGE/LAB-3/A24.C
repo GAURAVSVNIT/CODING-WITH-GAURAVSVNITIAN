@@ -7,6 +7,7 @@
 // 1 + nx when n>3 or n<1
 
 #include <stdio.h>
+#include <math.h>
 
 int main() 
 {
@@ -30,7 +31,7 @@ int main()
     } 
     else if (n == 3) 
     {
-        y = 1 + x * n;
+        y = 1 + pow(x, n);
     } 
     else 
     { // n > 3 or n < 1

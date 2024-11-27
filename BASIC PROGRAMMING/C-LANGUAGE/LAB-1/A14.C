@@ -11,19 +11,23 @@ int main()
     scanf("%c", &ch);
 
     // Check if the character is a capital letter
-    if (ch >= 'A' && ch <= 'Z') {
+    if (ch >= 'A' && ch <= 'Z') 
+    {
         printf("'%c' is a capital letter.\n", ch);
     }
     // Check if the character is a small case letter
-    else if (ch >= 'a' && ch <= 'z') {
+    else if (ch >= 'a' && ch <= 'z') 
+    {
         printf("'%c' is a small case letter.\n", ch);
     }
     // Check if the character is a digit
-    else if (ch >= '0' && ch <= '9') {
+    else if (ch >= '0' && ch <= '9') 
+    {
         printf("'%c' is a digit.\n", ch);
     }
     // If not a letter or digit, it must be a special symbol
-    else {
+    else 
+    {
         printf("'%c' is a special symbol.\n", ch);
     }
 

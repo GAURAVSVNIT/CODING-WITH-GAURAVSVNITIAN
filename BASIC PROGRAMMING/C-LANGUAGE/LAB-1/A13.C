@@ -11,9 +11,12 @@ int main()
     scanf("%d", &number);
 
     // Check whether the number is even or odd
-    if (number % 2 == 0) {
+    if (number % 2 == 0) 
+    {
         printf("%d is even.\n", number);
-    } else {
+    } 
+    else 
+    {
         printf("%d is odd.\n", number);
     }
 

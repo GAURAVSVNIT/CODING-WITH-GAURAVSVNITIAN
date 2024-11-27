@@ -1,24 +1,23 @@
 #include <stdio.h> 
  
- int main()
- {
-    int i,j,n;
-
-    printf("Enter the Number : ");
+{
+    int n;
     scanf("%d",&n);
-
-    for(i=1;i<=n;i++)
+    int nsp = n-1;
+    int nst = 1;
+    for(int i=0;i<n;i++)
     {
-        for(j=1;j<=n-i;j++)
+        for(int j=0;j<nsp;j++)
         {
-            printf("  ");
+            printf(" ");
         }
-
-        for(j=1;j<=2*i-1;j++)
+        nsp--;
+        for(int j=0;j<nst;j++)
         {
-            printf("* ");
+            printf(" *");
         }
+        nst++;
         printf("\n");
     }
     return 0;
- }
+}
