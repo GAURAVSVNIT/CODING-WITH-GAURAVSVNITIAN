@@ -1,32 +1,56 @@
-//107) Implement a Function Named flip to Flip the Last N Digits of a Number
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <math.h>
 
-// Function to flip the last N digits of a number
-int flip(int num, int n) {
-    int divisor = pow(10, n);
-    int lastNDigits = num % divisor;
-    int remainingDigits = num / divisor;
+void store_digit(int *No, int num);
 
-    int flippedLastNDigits = 0;
-    while (lastNDigits > 0) {
-        flippedLastNDigits = flippedLastNDigits * 10 + lastNDigits % 10;
-        lastNDigits /= 10;
-    }
+int main()
+{
+    int N,F;
+    printf("Enter the number: ");
+    scanf("%d",&N);
 
-    return remainingDigits * divisor + flippedLastNDigits;
-}
+    printf("\nEnter how many digits to flip from last: ");
+    scanf("%d",&F);
 
-int main() {
-    int num, n;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    printf("Enter the number of digits to flip: ");
-    scanf("%d", &n);
-
-    // Call the function to flip the last N digits
-    int result = flip(num, n);
-    printf("Result after flipping the last %d digits: %d\n", n, result);
+    store_digit(&N, F);
 
     return 0;
+}
+
+void store_digit(int *No, int num)
+{
+    int temp;
+    //*No = 12345;
+    int B[100];
+    int co =0;
+    
+    for (int i = 0; i < 100 ; i++)
+    {
+        B[i]= (*No/pow(10,i));
+        B[i] = B[i]%10;
+
+        
+        if (B[i]== 0)
+        {
+         break;
+        }
+        co++;
+    }
+
+
+
+    for (int i = 0; i < num/2; i++)
+    {
+        temp = B[num -1+i ];
+        B[num -1+i] = B[i];
+        B[i] = temp;
+    }
+    
+    for (int i = co-1; i >=0; i--)
+    {
+        printf("%d", B[i]);
+    }
+
 }
