@@ -9,7 +9,7 @@ struct Student {
 };
 
 int main() {
-    FILE *file = fopen("LNMIITSTUDENT.JAVA", "w");
+    FILE *file = fopen("LNMIITSTUDENT.txt", "w");
     if (file == NULL) {
         printf("Could not create file.\n");
         return 1;

@@ -1,0 +1,56 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .card
+{
+    background-color: #b0a48d;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 10px 5px 5px rgb(88, 211, 72);
+    overflow: hidden;
+    width: 300px;
+    max-width: 100%;
+}
+h2
+{
+    color: #1aa03b;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+input
+{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f1f1f1;
+}
+button
+{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #47aa1c;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+button:hover
+{
+    background-color: #1a1a1a;
+} 

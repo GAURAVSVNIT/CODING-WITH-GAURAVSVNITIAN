@@ -498,11 +498,11 @@
 // int main()
 // {
 //     char str[100],san[100][100];
-//     int i=0,j=0,k,minLen = 100, maxLen = 0;
+//     int i=0,j=0,k=0,minLen = 100, maxLen = 0;
 //     printf("Enter the string :");
 //     gets(str);
     
-//     for(k=0;str[k]!='\0';k++)
+//     for(k=0;str[k]!='\0';k++)                                                                                                              
 //     {
 //         if(str[k]==' ')
 //         {
@@ -580,11 +580,12 @@
 // #include <stdio.h>
 // #include <string.h>
 
-// int main() {
+// int main() 
+// {
 //     char str[100], wor[100], lon[100];
 //     int i = 0, j = 0, k;
-//     printf("Enter the string: ");'
-//     fgets(str, sizeof(str), stdin);
+//     printf("Enter the string: ");
+//     gets(str);
 
 //     printf("The Sentence is: ");
 //     puts(str);
@@ -592,7 +593,8 @@
 //     i = strlen(str);
 //     j = 0;
 
-//     while (i >= 0) {
+//     while (i >= 0) 
+//     {
 //         char ch = str[i];
 //         if (ch == ' ' || ch == '\n') 
 //         {
@@ -924,4 +926,271 @@
 //     int arr[5];
 //     int *ip = arr+4;
 //     printf("%d",sizeof(ip));
+// }
+// # include <stdio.h>
+//  static struct point{
+//     int x,y;
+// }p,*q;
+
+// int process(struct point s){
+//     p.x=2*p.x+p.y;
+//     return p.x;
+// }
+
+// void main(){
+//     int x;
+//     q=&p;
+//     p.x=3;
+//     p.y=process(q);
+//     x=process(q);
+//     printf("%d \n", x);
+// }
+
+// # include <stdio.h>
+// int main()
+// {
+//     int x,y=x;
+//     printf("%d %d",x,y);
+//     printf("\na=|%-+7.2f| b=%0+7.2fc=%-0+8.2f",1.2,1.2,1.2);
+// }
+// //a=|+1.20  | b=+001.20 c=+1.20   
+
+
+// #include <stdio.h>
+// #include <string.h>
+
+// #define MAX_STRINGS 100
+// #define MAX_LENGTH 100
+
+// // Function to perform bubble sort on an array of strings based on their length
+// void bubbleSortByLength(char arr[][MAX_LENGTH], int n) {
+//     char temp[MAX_LENGTH];
+//     for (int i = 0; i < n - 1; i++) {
+//         for (int j = 0; j < n - i - 1; j++) {
+//             if (strlen(arr[j]) > strlen(arr[j + 1])) {
+//                 // Swap the strings if they are in the wrong order
+//                 strcpy(temp, arr[j]);
+//                 strcpy(arr[j], arr[j + 1]);
+//                 strcpy(arr[j + 1], temp);
+//             }
+//         }
+//     }
+// }
+
+// int main() {
+//     char arr[MAX_STRINGS][MAX_LENGTH];
+//     int n;
+
+//     printf("Enter the number of strings: ");
+//     scanf("%d", &n); // Read the number of strings
+
+//     // Read the strings
+//     printf("Enter the strings:\n");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%s", arr[i]);
+//     }
+
+//     // Perform bubble sort on the array of strings based on their length
+//     bubbleSortByLength(arr, n);
+
+//     // Print the sorted array of strings
+//     printf("Sorted strings by length:\n");
+//     for (int i = 0; i < n; i++) {
+//         printf("%s\n", arr[i]);
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// #define MAX_STRINGS 100
+// #define MAX_LENGTH 100
+
+// // Function to perform bubble sort on an array of strings
+// void bubbleSort(char arr[][MAX_LENGTH], int n) {
+//     char temp[MAX_LENGTH];
+//     for (int i = 0; i < n - 1; i++) {
+//         for (int j = 0; j < n - i - 1; j++) {
+//             if (strcmp(arr[j], arr[j + 1]) > 0) {
+//                 // Swap the strings if they are in the wrong order
+//                 strcpy(temp, arr[j]);
+//                 strcpy(arr[j], arr[j + 1]);
+//                 strcpy(arr[j + 1], temp);
+//             }
+//         }
+//     }
+// }
+
+// int main() {
+//     char arr[MAX_STRINGS][MAX_LENGTH];
+//     int n;
+
+//     printf("Enter the number of strings: ");
+//     scanf("%d", &n); // Read the number of strings
+
+//     // Read the strings
+//     printf("Enter the strings:\n");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%s", arr[i]);
+//     }
+
+//     // Perform bubble sort on the array of strings
+//     bubbleSort(arr, n);
+
+//     // Print the sorted array of strings
+//     printf("Sorted strings:\n");
+//     for (int i = 0; i < n; i++) {
+//         printf("%s\n", arr[i]);
+//     }
+
+//     return 0;
+// }
+// #include <stdio.h>
+// #include <string.h>
+
+// #define MAX_STUDENTS 100
+
+// Define a structure to store student information
+// struct Student {
+//     char name[100];
+//     int roll_no;
+//     float marks;
+// };
+
+// // Function to perform bubble sort on an array of structures based on the marks field
+// void bubbleSortByMarks(struct Student arr[], int n) {
+//     struct Student temp;
+//     for (int i = 0; i < n - 1; i++) {
+//         for (int j = 0; j < n - i - 1; j++) {
+//             if (arr[j].marks < arr[j + 1].marks) {
+//                 // Swap the structures if they are in the wrong order
+//                 temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+// }
+
+// // Function to print the array of structures
+// void printStudents(struct Student arr[], int n) {
+//     for (int i = 0; i < n; i++) {
+//         printf("Name: %s, Roll No: %d, Marks: %.2f\n", arr[i].name, arr[i].roll_no, arr[i].marks);
+//     }
+// }
+
+// int main() {
+//     struct Student students[MAX_STUDENTS];
+//     int n;
+
+//     printf("Enter the number of students: ");
+//     scanf("%d", &n); // Read the number of students
+
+//     // Read the student information
+//     for (int i = 0; i < n; i++) {
+//         printf("Enter information for student %d:\n", i + 1);
+//         printf("Name: ");
+//         scanf(" %[^\n]", students[i].name); // Read the name of the student
+//         printf("Roll No: ");
+//         scanf("%d", &students[i].roll_no); // Read the roll number of the student
+//         printf("Marks: ");
+//         scanf("%f", &students[i].marks); // Read the marks of the student
+//     }
+
+//     // Perform bubble sort on the array of structures based on the marks field
+//     bubbleSortByMarks(students, n);
+
+//     // Print the sorted array of structures
+//     printf("\nSorted students by marks:\n");
+//     printStudents(students, n);
+
+//     return 0;
+//}
+
+// #include <stdio.h>
+
+// #define DIGITS 3
+
+// void sumOfDigits(int num1[], int num2[], int sum[], int carry[]) {
+//     int carryOver = 0;
+
+//     for (int i = DIGITS - 1; i >= 0; i--) {
+//         int digitSum = num1[i] + num2[i] + carryOver;
+//         sum[i] = digitSum % 10;
+//         carry[i] = digitSum / 10;
+//         carryOver = carry[i];
+//     }
+// }
+
+// int main() {
+//     int num1[DIGITS], num2[DIGITS], sum[DIGITS], carry[DIGITS];
+
+//     printf("Enter the first 3-digit number: ");
+//     for (int i = 0; i < DIGITS; i++) {
+//         scanf("%1d", &num1[i]); // Read each digit of the first number
+//     }
+
+//     printf("Enter the second 3-digit number: ");
+//     for (int i = 0; i < DIGITS; i++) {
+//         scanf("%1d", &num2[i]); // Read each digit of the second number
+//     }
+
+//     // Perform the sum of digits
+//     sumOfDigits(num1, num2, sum, carry);
+
+//     // Print the results
+//     printf("Sum of digits: ");
+//     for (int i = 0; i < DIGITS; i++) {
+//         printf("%d", sum[i]);
+//     }
+//     printf("\n");
+
+//     printf("Carry values: ");
+//     for (int i = 0; i < DIGITS; i++) {
+//         printf("%d", carry[i]);
+//     }
+//     printf("\n");
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main() {
+//     int n[] = {1, 2, 3, 4, 5}; 
+//     int i, l = 0, r = -1; 
+
+
+
+//     int size = sizeof(n) / sizeof(n[0]); 
+
+//     for (i = 0; i < size; i++) {
+//         int suml = 0, sumr = 0;
+//         for (int j = i - 1, k = i + 1; j >= 0 || k < size; j--, k++) {
+//             if (j >= 0) {
+//                 suml += n[j]; 
+//             }
+//             if (k < size) {
+//                 sumr += n[k];             
+//                 }
+//             if (suml == sumr) {
+//                 l = 1;
+//                 r = i;
+//                 break; 
+//             }
+//         }
+//         if (l == 1) {
+//             break; 
+//         }
+//     }
+
+//     if (l == 0) {
+//         printf("%d\n", -1); 
+//     } else {
+//         printf("%d\n", r); 
+//     }
+
+//     return 0;
 // }
