@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .body{
+            font-family:Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: rgb(162, 30, 30);
+        }
+        h1, h2{
+            color: red;
+        }
+        .container{
+            background-color: #fff;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .flex-container
+        {
+            display: flex;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+        .square{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pastel-1 {
+        background-color: #ffb3ba;
+      }
+      .pastel-2 {
+        background-color: #baffc9;
+      }
+      .pastel-3 {
+        background-color: #bae1ff;
+      }
+      .pastel-4 {
+        background-color: #ffffba;
+      }
+      .pastel-5 {
+        background-color: #ffdfba;
+      }
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <div class="container">
+        <h2>Default Flex</h2>
+        <div class = "flex-container" 
+        style="flex-direction:column;" 
+        style="justify-content:space-around;">
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+    </div>
+</div>
+
+    <div class="container">
+        <h2>Flex Column</h2>
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+    </div>
+
+    <div class="container">
+        <h2>Justify Content</h2>
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+    </div>
+
+    <div class="container">
+        <h2>Align Items</h2>
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Wrap</h2>
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Grow</h2>
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+    </div>    
+</body>
+</html>
