@@ -1,0 +1,18 @@
+let str = "I am a string";
+let str2 = "I am Gaurav";
+let str3 = "I love JavaScript";
+let str4 = "    I love Coding   ";
+console.log(str.length);
+console.log(str.charAt(2));
+console.log(str4.trim().toUpperCase());
+console.log(str3.slice(2, 6));
+console.log(str3.slice(-10, -5));
+console.log(str3.substring(2, 6));
+console.log(str3.replace("love", "hate"));
+console.log(str3.repeat("love", 3));
+console.log(str3.indexOf("love"));
+console.log(str.lastIndexOf("a"));
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.concat(str2));
+console.log(str.concat(" ", str2, " ", str3));
