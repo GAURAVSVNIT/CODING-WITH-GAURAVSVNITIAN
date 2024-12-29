@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    public:
+    string name;
+    int age;
+    int rollno;
+    float marks;
+    student(string name,int a,int r,float m)
+    {
+        this->name=name;
+        age=a;
+        rollno=r;
+        marks=m;
+        cout<<"constructor called"<<endl;
+    }
+}; 
+int main()
+{
+    student s1("gaurav",20,1,50);
+    // s1.name="gaurav";
+    // s1.age=20;
+    // s1.rollno=1;
+    // s1.marks=50;
+
+}
