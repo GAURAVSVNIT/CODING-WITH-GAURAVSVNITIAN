@@ -1,0 +1,19 @@
+{
+  "name": "chaibackend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "chai"
+  ],
+  "author": "Gaurav",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "env": "^0.0.2",
+    "express": "^4.21.2"
+  }
+}
