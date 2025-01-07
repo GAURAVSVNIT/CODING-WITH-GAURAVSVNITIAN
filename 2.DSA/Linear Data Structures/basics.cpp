@@ -4,7 +4,6 @@ class Node
 {
     public:
     int value;
-    Node* next;//pointer to next node
     Node(int value)
     {
         this->value = value;
@@ -17,7 +16,8 @@ void display(Node* head)
     while(temp!=NULL)
     {
         cout<<temp->value<<" ";
-        temp = temp->next;
+ode* next;//pointer to next node
+            temp = temp->next;
     }
 }
 void displayrecursive(Node* head)

@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/**  @type {import('tailwindcss').Config} */
 export const content = ["./Serious-WebD/**/*.{html,js}"];
 export const theme = 
 {
