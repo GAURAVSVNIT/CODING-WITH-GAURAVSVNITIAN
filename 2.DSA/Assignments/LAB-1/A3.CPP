@@ -32,6 +32,8 @@ class student
             cout << "Roll Number: " << roll_No << endl;
             cout << "Name: " << name << endl;
             cout << "Marks: " << marks << endl;
+            cout<<endl;
+            cout<<"-----------------------------------"<<endl;  
         }
 };
 
