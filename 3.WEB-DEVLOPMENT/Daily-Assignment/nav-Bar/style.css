@@ -25,10 +25,14 @@ header
     font-weight: bold;
     color: aliceblue;
 }
-.lineb
+#check
 {
     display: none;
 }
+ .lineb
+{
+    display: none;
+} 
 .nav ul
 {
     display: flex;
@@ -91,43 +95,8 @@ header
     }
 }
 
-@media only screen and (max-width: 900px) 
+@media only screen and (max-width: 900px)
 {
-    .lineb
-    {
-        display: block;
-        cursor: pointer;
-    }
-    .lineb .line
-    {
-        width: 20px;
-        height: 4px;
-        background: #1a1a1a;
-        margin: 5px 0;
-    }
-    .nav
-    {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        background: #1a1a1a;
-        transition: 0.2s;
-    }
-    .nav ul 
-    {
-        display: block;
-        width: fit-content;
-        margin: 80px auto 0 auto;
-        text-align: center;
-        /* opacity: 0; */
-    }
-    .nav ul li a
-    {
-        margin-bottom: 12px;
-    }
 
-
+    
 }
-
