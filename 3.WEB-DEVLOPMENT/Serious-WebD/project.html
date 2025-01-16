@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travello - Your Next Adventure Awaits</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./output.css">
+
+</head>
+<body class="text-gray-900">
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between py-4">
+        <div class="flex items-center space-x-2">
+          <i data-lucide="plane" class="h-8 w-8 text-blue-600"></i>
+          <span class="text-2xl font-bold">Travello</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Destinations</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Packages</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Blog</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Contact Us</a>
+        </div>
+
+        <button class="md:hidden" id="mobile-menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300" id="mobile-menu">
+    <button class="absolute top-4 right-4" id="close-menu">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="flex flex-col items-center justify-center h-full space-y-8">
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Home</a>
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Destinations</a>
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Packages</a>
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Blog</a>
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21" alt="Hero Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+    <div class="relative h-full flex items-center justify-center text-center text-white">
+      <div class="max-w-3xl px-6">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Your Next Adventure Awaits</h1>
+        <p class="text-xl mb-8">Explore the world's most breathtaking destinations with Travello.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors">
+            Start Your Journey
+          </button>
+          <button class="px-8 py-3 bg-white text-gray-900 hover:bg-gray-100 rounded-full transition-colors">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold mb-6">Who We Are</h2>
+          <p class="text-gray-600 text-lg leading-relaxed">
+            At Travello, we believe in creating unforgettable travel experiences. From exotic escapes to urban adventures, 
+            we tailor journeys that ignite your wanderlust.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60" alt="Happy travelers" class="rounded-lg">
+          <img src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624" alt="Travel moments" class="rounded-lg mt-8">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Top Destinations</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group relative overflow-hidden rounded-lg">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+            <div class="absolute bottom-0 p-6">
+              <h3 class="text-2xl font-bold text-white mb-2">Paris</h3>
+              <p class="text-white/90">The city of love and lights</p>
+            </div>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" alt="Bali" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+            <div class="absolute bottom-0 p-6">
+              <h3 class="text-2xl font-bold text-white mb-2">Bali</h3>
+              <p class="text-white/90">Tropical paradise</p>
+            </div>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg">
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf" alt="Tokyo" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+            <div class="absolute bottom-0 p-6">
+              <h3 class="text-2xl font-bold text-white mb-2">Tokyo</h3>
+              <p class="text-white/90">Where tradition meets future</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Exclusive Travel Packages</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1491557345352-5929e343eb89" alt="European Dream" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">European Dream</h3>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-2xl font-bold text-blue-600">$2999</span>
+              <span class="text-gray-600">10 Days</span>
+            </div>
+            <button class="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1" alt="Asian Adventure" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Asian Adventure</h3>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-2xl font-bold text-blue-600">$3499</span>
+              <span class="text-gray-600">14 Days</span>
+            </div>
+            <button class="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801" alt="African Safari" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">African Safari</h3>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-2xl font-bold text-blue-600">$4999</span>
+              <span class="text-gray-600">12 Days</span>
+            </div>
+            <button class="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Traveler Stories</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4">
+            <h3 class="font-bold">Sarah Johnson</h3>
+          </div>
+          <p class="text-gray-600 italic">"Best travel experience ever! The team at Travello made everything perfect."</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+            <h3 class="font-bold">Michael Chen</h3>
+          </div>
+          <p class="text-gray-600 italic">"Incredible attention to detail and amazing destinations."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Stay Connected</h2>
+      <p class="mb-8">Sign up for our newsletter to receive exclusive deals and travel inspiration.</p>
+      <form class="max-w-md mx-auto">
+        <div class="flex gap-4">
+          <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-full text-gray-900">
+          <button type="submit" class="px-6 py-2 bg-white text-blue-600 rounded-full hover:bg-gray-100 transition-colors">
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i data-lucide="plane" class="h-6 w-6"></i>
+            <span class="text-xl font-bold">Travello</span>
+          </div>
+          <p class="text-gray-400">Your trusted travel companion for unforgettable adventures.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Destinations</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Packages</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center space-x-2 text-gray-400">
+              <i data-lucide="map-pin" class="h-5 w-5"></i>
+              <span>123 Travel Street, Adventure City</span>
+            </li>
+            <li class="flex items-center space-x-2 text-gray-400">
+              <i data-lucide="phone" class="h-5 w-5"></i>
+              <span>+1 234 567 890</span>
+            </li>
+            <li class="flex items-center space-x-2 text-gray-400">
+              <i data-lucide="mail" class="h-5 w-5"></i>
+              <span>hello@travello.com</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-blue-400 transition-colors"><i data-lucide="instagram" class="h-6 w-6"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-colors"><i data-lucide="facebook" class="h-6 w-6"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-colors"><i data-lucide="twitter" class="h-6 w-6"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-colors"><i data-lucide="linkedin" class="h-6 w-6"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 Travello. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-full');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-white', 'shadow-lg');
+      } else {
+        navbar.classList.remove('bg-white', 'shadow-lg');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -3,11 +3,18 @@
 typedef struct Node
 {
     int data;
-    Node *next;
+    struct Node *next;
 }Node;
 //Function to dispaly
-void display()
+void display(Node** head)
 {
+    Node* temp=*head;
+    while(temp!=NULL)
+    {
+        printf("%d ",temp->data);
+        temp=temp->next;
+    }
+    printf("\n");
 
 }
 Node* new(int val)
@@ -17,37 +24,38 @@ Node* new(int val)
     new->next = NULL;
     return new;
 }
-Node*insertAtEnd(Node*head,int data)
+void insertAtEnd(Node**head,int data)
 {
     Node*temp=new(data);
-    if(head==NULL)
+    if(*head==NULL)
     {
-        head=temp;
+        *head=temp;
     }
     else
     {
-        Node*temp1=head;
+        Node*temp1=*head;
         while(temp1->next!=NULL)
         {
             temp1=temp1->next;
         }
-        temp1->next=temp;
+        temp1->next=temp;   
     }
-    return head;
 }
-Node*insertAtHead()
-{
+// void insertAtHead()
+// {
 
-}
-Node*insertAtPosition()
-{
+// }
+// void insertAtPosition()
+// {
 
-}
+//}
 
 int main()
 {
-    Node *head;
-    insertAtHead(head,10);
+    Node  *head = NULL;
+    insertAtEnd(&head,10);
+    display(&head);
+    free(head);
 
 }
     

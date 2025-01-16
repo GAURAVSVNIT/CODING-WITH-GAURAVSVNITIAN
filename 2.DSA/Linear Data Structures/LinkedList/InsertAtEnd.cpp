@@ -71,6 +71,7 @@ int main()
     ll.display();
     cout<<ll.size;
     ll.insertAtEnd(head,40);
+    ll.insertAtEnd(head,50);
     
 
     return 0;  
