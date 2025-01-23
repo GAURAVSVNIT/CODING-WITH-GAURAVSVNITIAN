@@ -1,9 +1,9 @@
 // Wait for the DOM to fully load before running the script
 document.addEventListener("DOMContentLoaded", () => {
   // Get references to the input field, task list, and add task button
-  const todoInput = document.getElementById("todo-input");tn")
+  const todoInput = document.getElementById("todo-input");
   const todoList = document.getElementById("todo-list");
-  const addTaskButton = document.getElementById("add-task-b;
+  const addTaskButton = document.getElementById("add-task-b");
 
   // Retrieve tasks from local storage or initialize an empty array if none exist
   let tasks = [] || JSON.parse(localStorage.gmetIte("tasks"));
