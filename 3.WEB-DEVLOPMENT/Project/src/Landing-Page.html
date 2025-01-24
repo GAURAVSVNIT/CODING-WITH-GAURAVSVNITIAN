@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<style>
+  /* Custom styles */
+#navbar 
+{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+body 
+{
+  font-family: 'Roboto', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Sans:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@font-face {
+  font-family: 'NinatoDreams';
+  src: url('/path/to/fonts/NinatoDreams.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+</style>
+<!-- <div class="font-oswald text-4xl">Heading</div> <div class="font-ptsans text-base">Body Text</div> -->
+<body class="font-roboto">
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-gradient-to-r from-black to-gray-800 backdrop-blur-lg shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="plane" class="h-8 w-8 text-blue-600"></i>
+        <span class="font-alegreya text-4xl font-bold text-white">Travelligo</span>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#" class="hover:text-blue-600 transition-colors text-white">Home</a>
+        <a href="#" class="hover:text-blue-600 transition-colors text-white">Destinations</a>
+        <a href="#" class="hover:text-blue-600 transition-colors text-white">Packages</a>
+        <a href="#" class="hover:text-blue-600 transition-colors text-white">Blog</a>
+        <a href="#" class="hover:text-blue-600 transition-colors text-white">Contact Us</a>
+      </div>
+      <button class="md:hidden" id="menuBtn">
+        <i data-lucide="menu" class="text-white"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="fixed inset-0 z-40 bg-white md:hidden hidden">
+    <button class="absolute top-4 right-6" id="closeMenu">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="flex flex-col items-center justify-center h-full space-y-8">
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Home</a>
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Destinations</a>
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Packages</a>
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Blog</a>
+      <a href="#" class="text-xl hover:text-blue-600 transition-colors">Contact Us</a>
+    </div>
+  </div>
+  <div class="relative h-screen">
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1506929562872-bb421503ef21"
+        alt="Background"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+    <div class="relative h-full flex items-center justify-center text-center text-white">
+      <div class="max-w-3xl px-6">
+        <h1 class="md:text-6xl font-pacifico text-4xl font-bold mb-6">Your Next Adventure Awaits</h1>
+        <p class="font-montserrat text-2xl mb-8">Explore the world's most breathtaking destinations with Travelligo.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors font-ninato text-xl">
+            Start Your Journey
+          </button>
+          <button class="px-8 py-3 bg-white text-gray-900 hover:bg-gray-100 rounded-full transition-colors font-ninato text-xl">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Stay Connected</h2>
+      <p class="mb-8">Sign up for our newsletter to receive exclusive deals and travel inspiration.</p>
+      <form class="max-w-md mx-auto">
+        <div class="flex gap-4">
+          <input 
+            type="email" 
+            placeholder="Enter your email"
+            class="flex-1 px-4 py-2 rounded-full text-gray-900"
+          />
+          <button type="submit" class="px-6 py-2 bg-white text-blue-600 rounded-full hover:bg-gray-100 transition-colors">
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i data-lucide="plane" class="h-6 w-6"></i>
+            <span class="text-xl font-bold">Travelligo</span>
+          </div>
+          <p class="text-gray-400">Your trusted travel companion for unforgettable adventures.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Destinations</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Packages</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center space-x-2 text-gray-400">
+              <i data-lucide="map-pin" class="h-5 w-5"></i>
+              <span>123 Travel Street, Adventure City</span>
+            </li>
+            <li class="flex items-center space-x-2 text-gray-400">
+              <i data-lucide="phone" class="h-5 w-5"></i>
+              <span>+1 234 567 890</span>
+            </li>
+            <li class="flex items-center space-x-2 text-gray-400">
+              <i data-lucide="mail" class="h-5 w-5"></i>
+              <span>hello@Travelligo.com</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-blue-400 transition-colors"><i data-lucide="instagram" class="h-6 w-6"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-colors"><i data-lucide="facebook" class="h-6 w-6"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-colors"><i data-lucide="twitter" class="h-6 w-6"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-colors"><i data-lucide="linkedin" class="h-6 w-6"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 Travelligo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  // Initialize Lucide icons
+lucide.createIcons();
+
+// Mobile menu functionality
+const menuBtn = document.getElementById('menuBtn');
+const closeMenu = document.getElementById('closeMenu');
+const mobileMenu = document.getElementById('mobileMenu');
+const navbar = document.getElementById('navbar');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('hidden');
+});
+
+closeMenu.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden');
+});
+ // Navbar scroll effect
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('bg-white', 'shadow-lg');
+  } else {
+    navbar.classList.remove('bg-white', 'shadow-lg');
+  }
+    });
+  </script>
+</body>
+</html>
