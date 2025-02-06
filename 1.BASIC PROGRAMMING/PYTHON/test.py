@@ -1,10 +1,24 @@
-import numpy as np
+def smallestpalin(X, Y):
+    str1=""
+    str1 += '1' * (X // 2)
+    str1 += '2' * (Y // 2)
 
-a = [[1, 2, 3, 4, 5],[6, 7, 8, 9, 10],[11, 12, 13, 14, 15],[16, 17, 18, 19, 20],[21, 22, 23, 24, 25]]
-b = np.array(a)
-def chai(n):
-    print("n")
+    str2 = str1 + str1[::-1]
 
-chai_one = "leamon tea"
-chai_two = "ginger tea"
-chai_three = "masala chai"
+    return str2     
+    
+
+def main():
+    T = int(input())
+    test_cases = []
+
+    for _ in range(T):
+        X, Y = map(int, input().split())
+        test_cases.append((X, Y))
+
+    for X, Y in test_cases:
+        print(smallestpalin(X, Y))
+
+if __name__ == "__main__":
+    main()
+
