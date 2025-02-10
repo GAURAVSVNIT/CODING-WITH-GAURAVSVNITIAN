@@ -1,49 +1,32 @@
-// require("dotenv").config({path: "./config.env"});
+import dotenv from 'dotenv';
+dotenv.config();
 
-import 'dotenv/config';
+import mongoose from 'mongoose';
 
-import mongoose from "mongoose";
-import {DB_NAME} from "./constants"
-import connectDB from "./db";
-
-
-connectDB();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-;(async () => {
-    try{
-        await mongoose.connect(`${process.env.
-            MONGODB_URI}/${DB_NAME}`)
-            app.on("error",(error) => {
-                console.log("ERRR:",error);
-                throw error
-        })
-
-        app.listen(process.env.PORT, () => {
-            console.log(`App is listening on port 
-                ${process.env.PORT}`);
-        })
-
+const connectDB = async () => {
+    try {
+        const connectionInstance = await mongoose.connect(process.env.MONGODB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+        console.log(`MONGODB connection successful 
+        || 
+        DB HOST: ${connectionInstance.connection.host}`);
+    } catch (error) {
+        console.error('MONGODB connection error', error);
+        process.exit(1);
     }
-    catch (error)
-    {
-        console.error("ERROR:",error)
-    }
-})()*/
+};
+
+connectDB()
+.then(() => {
+    console.log('Connected to MongoDB');
+
+    // Start the server
+    app.listen(process.env.PORT || 3000, () => {
+        console.log(`Server is running on PORT ${PORT}`);
+    });
+})
+.catch((error) => {
+    console.error('Error connecting to MongoDB', error);
+});

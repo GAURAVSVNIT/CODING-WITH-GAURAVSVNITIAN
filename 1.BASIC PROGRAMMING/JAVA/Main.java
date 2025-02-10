@@ -6,6 +6,7 @@ class Main{
         System.out.println("Value of a is " + a);
         System.out.println("Value of b is " + b);
         System.out.println("Sum of a and b is " + sum);
+        System.out.println(-7%2);
     }
     public static int add(int a, int b){
         return a + b;
