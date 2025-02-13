@@ -1,17 +1,24 @@
 {
   "name": "3-web-devlopment",
   "version": "1.0.0",
+  "type": "module",
   "main": "datatype.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": 
+  {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
+  "devDependencies": 
+  {
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.0",
     "tailwindcss": "^3.4.16"
   },
-  "dependencies": {
+  "dependencies": 
+  {
     "bootstrap": "^5.3.3"
   }
 }

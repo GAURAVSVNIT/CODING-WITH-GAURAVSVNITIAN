@@ -4,6 +4,7 @@ class Node
 {
     public:
     int value;
+    Node*next;
     Node(int value)
     {
         this->value = value;
@@ -16,7 +17,7 @@ void display(Node* head)
     while(temp!=NULL)
     {
         cout<<temp->value<<" ";
-ode* next;//pointer to next node
+ Node* next;//pointer to next node
             temp = temp->next;
     }
 }
