@@ -20,7 +20,8 @@ public:
     }
 };
 
-class CircularLinkedList {
+class CircularLinkedList 
+{
 private:
     Node *head;
 public:
@@ -34,14 +35,16 @@ public:
             return;
         }
         Node *temp = head;
-        do {
+        do 
+        {
             cout << temp->data << " -> ";
             temp = temp->next;
         } while (temp != head);
         cout << "(head)" << endl;
     }
 
-    void insertAtPosition(int position, int new_data) {
+    void insertAtPosition(int position, int new_data) 
+    {
         Node *new_node = new Node(new_data);
         if (head == NULL) {
             if (position == 1) {

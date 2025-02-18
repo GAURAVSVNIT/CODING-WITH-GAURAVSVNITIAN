@@ -66,7 +66,10 @@ public:
 };
 
 int main() {
-    Stack stack(5);
+    int capacity;
+    cout << "Enter the capacity of stack: ";
+    cin >> capacity;
+    Stack stack(capacity);
     int choice, data;
 
     while (true) {
