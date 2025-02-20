@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 int maze(int sr,int sc,int er,int ec){
 if(sr>er || sc>ec) return 0;

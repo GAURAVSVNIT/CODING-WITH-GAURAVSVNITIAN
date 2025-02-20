@@ -14,11 +14,13 @@ int precedence(char op) {
     return 0;
 }
 
-string infixToPostfix(string infix) {
+string infixToPostfix(string infix) 
+{
     stack<char> st;
     string postfix = "";
     
-    for (int i = 0; i < infix.length(); i++) {
+    for (int i = 0; i < infix.length(); i++) 
+    {
         char c = infix[i];
 
         if (isalnum(c)) {
@@ -38,9 +40,17 @@ string infixToPostfix(string infix) {
         }
         
         else {
-            while (!st.empty() && precedence(st.top()) >= precedence(c)) {
-                postfix += st.top();
-                st.pop();
+            if(precedence(st.top())== precedence(c) && c=='^')
+            { 
+                st.push(c);
+            }
+            else
+            {
+                while (!st.empty() && precedence(st.top()) >= precedence(c)) 
+                {
+                    postfix += st.top();
+                    st.pop();
+                }
             }
             st.push(c);
         }
@@ -54,7 +64,8 @@ string infixToPostfix(string infix) {
     return postfix;
 }
 
-int main() {
+int main() 
+{
     string infix;
     cout << "Enter infix expression: ";
     cin >> infix;

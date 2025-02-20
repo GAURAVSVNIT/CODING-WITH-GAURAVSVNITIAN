@@ -43,5 +43,6 @@ def next_permutation(s):
 
 t = int(input())
 for i in range(t):
-    s = list(input())
+    s = list(input().split())
     print(next_permutation(s))
+
