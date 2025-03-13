@@ -34,7 +34,7 @@ int main()
     printf("Enter the Number  of node : ");
     scanf("%d", &n);
 
-    int data[n];
+    int *data = (int *)malloc(n * sizeof(int));
     for (int i = 0; i < n; i++)
     {
         printf("Enter the value of node %d: ", i + 1);
@@ -59,5 +59,6 @@ int main()
     
     printf("The linked list is: ");
     display(head);
+    free(data);
     return 0;
 }

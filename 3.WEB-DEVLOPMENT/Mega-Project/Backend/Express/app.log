@@ -1,0 +1,6 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/tea\",\"status\":\"201\",\"responseTime\":\"17.466\"}","timestamp":"2025-03-13T04:47:09.443Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/tea\",\"status\":\"201\",\"responseTime\":\"0.831\"}","timestamp":"2025-03-13T04:48:12.953Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/\",\"status\":\"404\",\"responseTime\":\"1.216\"}","timestamp":"2025-03-13T04:48:32.907Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/teas\",\"status\":\"200\",\"responseTime\":\"0.431\"}","timestamp":"2025-03-13T04:48:47.083Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"POST","timestamp":"2025-03-13T04:51:06.000Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/tea\",\"status\":\"201\",\"responseTime\":\"15.504\"}","timestamp":"2025-03-13T04:51:06.006Z"}

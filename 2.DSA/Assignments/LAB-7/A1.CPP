@@ -1,124 +1,143 @@
-// Question 1: Write a C/C++ code to evaluate the Postfix Expression
-// using Stack.
-// Example:
-// Input: 34*25*+
-// Output: 22
-
+// Question 1: Write a C/C++ code to evaluate the Postfix Expression // using Stack. // Example: // Input: 3425+ // Output: 22
 
 #include <iostream>
-#include <string>
+#include <sstream>
+#include <cmath>
+
 using namespace std;
 
-class Node
-{
+// Node class for Stack (Linked List)
+class Node {
 public:
-    char data;
-    Node *next;
-    Node(char data)
-    {
-        this->data = data;
-        this->next = NULL;
+    double data;
+    Node* next;
+
+    // Constructor
+    Node(double value) {
+        data = value;
+        next = nullptr;
     }
 };
 
-class Stack
-{
+// Stack class using Linked List
+class Stack {
 private:
-    Node *top;
-    
+    Node* topNode;
 public:
+    // Constructor
+    Stack() { topNode = nullptr; }
 
-    Stack()
-    {
-        top = NULL;
+    // Push element onto the stack
+    void push(double value) {
+        Node* newNode = new Node(value);
+        newNode->next = topNode;
+        topNode = newNode;
     }
 
-    void push(char data)
-    {
-        Node *new_node = new Node(data);
-        new_node->next = top;
-        top = new_node;
-    }
-
-    void pop()
-    {
-        if (isEmpty())
-        {
-            cout << "Stack is empty." << endl;
-            return;
+    // Pop element from the stack
+    double pop() {
+        if (topNode == nullptr) {
+            cout << "Stack underflow!" << endl;
+            return 0;
         }
-        Node *temp = top;
-        top = top->next;
+        double value = topNode->data;
+        Node* temp = topNode;
+        topNode = topNode->next;
         delete temp;
+        return value;
     }
 
-    char peek()
-    {
-        if (isEmpty())
-        {
-            cout << "Stack is empty." << endl;
-            return -1;
+    // Peek top element
+    double top() {
+        if (topNode == nullptr) {
+            cout << "Stack is empty!" << endl;
+            return 0;
         }
-        return top->data;
+        return topNode->data;
     }
 
-    bool isFull()
-    {
-        return false;
+    // Check if stack is empty
+    bool isEmpty() {
+        return topNode == nullptr;
     }
 
-    bool isEmpty()
-    {
-        return top == NULL;
-    }
-
-    void display()
-    {
-        if (isEmpty())
-        {
-            cout << "Stack is empty." << endl;
-            return;
+    // Destructor to free memory
+    ~Stack() {
+        while (!isEmpty()) {
+            pop();
         }
-        Node *temp = top;
-        while (temp != NULL)
-        {
-            cout << temp->data << " -> ";
-            temp = temp->next;
-        }
-        cout << endl;
-    }
-
-    int evaluatePostfix(string exp)
-    {
-        for (int i = 0; i < exp.length(); i++)
-        {
-            if (isdigit(exp[i]))
-            {
-                push(exp[i] - '0');
-            }
-            else
-            {
-                int val1 = peek();
-                pop();
-                int val2 = peek();
-                pop();
-                switch (exp[i])
-                {
-                case '+':
-                    push(val2 + val1);
-                    break;
-                case '-':
-                    push(val2 - val1);
-                    break;
-                case '*':
-                    push(val2 * val1);
-                    break;
-                case '/':
-                    push(val2 / val1);
-                    break;
-                }
-            }
-        }
-        return peek();
     }
 };
+
+// Function to evaluate postfix expression using Linked List Stack
+double evaluatePostfix(string expression) {
+    Stack stack;
+    stringstream ss(expression);
+    string token;
+
+    while (ss >> token) {
+        if (isdigit(token[0])) { // Operand, push to stack
+            stack.push(stod(token));
+        } else { // Operator, pop two operands and compute
+            if (stack.isEmpty()) {
+                cout << "Invalid Expression!" << endl;
+                return 0;
+            }
+            double b = stack.pop();
+            if (stack.isEmpty()) {
+                cout << "Invalid Expression!" << endl;
+                return 0;
+            }
+            double a = stack.pop();
+
+            if (token == "+") stack.push(a + b);
+            else if (token == "-") stack.push(a - b);
+            else if (token == "*") stack.push(a * b);
+            else if (token == "/") stack.push(a / b);
+            else if (token == "^") stack.push(pow(a, b)); // Handle right-associativity
+            else {
+                cout << "Invalid operator: " << token << endl;
+                return 0;
+            }
+        }
+    }
+
+    if (stack.isEmpty()) {
+        cout << "Invalid Expression!" << endl;
+        return 0;
+    }
+    return stack.pop(); // Final result
+}
+
+// Menu-driven function
+void menu() {
+    int choice;
+    string expression;
+
+    do {
+        cout << "\nMenu:";
+        cout << "\n1. Evaluate Postfix Expression";
+        cout << "\n2. Exit";
+        cout << "\nEnter your choice: ";
+        cin >> choice;
+        cin.ignore(); // To handle newline after choice input
+
+        switch (choice) {
+            case 1:
+                cout << "Enter Postfix Expression (space-separated): ";
+                getline(cin, expression);
+                cout << "Result: " << evaluatePostfix(expression) << endl;
+                break;
+            case 2:
+                cout << "Exiting the program. Goodbye!\n";
+                break;
+            default:
+                cout << "Invalid choice! Please enter again.\n";
+        }
+    } while (choice != 2);
+}
+
+int main() {
+    menu();
+    return 0;
+}

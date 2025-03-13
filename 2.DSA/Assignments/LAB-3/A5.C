@@ -36,7 +36,7 @@ int main() {
     printf("Enter the Number  of node : ");
     scanf("%d", &n);
 
-    int data[n];
+    int *data = (int *)malloc(n * sizeof(int));
     for (int i = 0; i < n; i++)
     {
         printf("Enter the value of node %d: ", i + 1);
@@ -63,7 +63,7 @@ int main() {
     display(head);
     
     // Convert the linked list to an array
-    int arr[n];
+    int *arr = (int *)malloc(n * sizeof(int));
     struct Node *current = head;
     for (int i = 0; i < n; i++) {
         arr[i] = current->data;
@@ -76,5 +76,7 @@ int main() {
     }
     printf("\n");
 
+    free(data);
+    free(arr);
     return 0;
 }

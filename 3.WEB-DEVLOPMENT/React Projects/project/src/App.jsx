@@ -4,7 +4,7 @@ import axios from 'axios';
 function App() {
   const [amount, setAmount] = useState('1');
   const [fromCurrency, setFromCurrency] = useState('USD');
-  const [toCurrency, setToCurrency] = useState('EUR');
+  const [toCurrency, setToCurrency] = useState('INR');
   const [exchangeRate, setExchangeRate] = useState(0);
   const [currencies, setCurrencies] = useState([]);
 
