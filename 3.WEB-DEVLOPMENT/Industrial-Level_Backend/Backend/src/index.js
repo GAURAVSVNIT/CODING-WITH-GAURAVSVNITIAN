@@ -1,20 +1,39 @@
+// import dotenv from 'dotenv';
+// import { app } from './app.js'; // Ensure the correct file extension
+// import connectDB from './db/index.js';
+
+
+// dotenv.config({
+//     path: './.env',
+// });
+// const PORT = process.env.PORT || 8000;
+
+// connectDB()
+// .then(
+//     () => {
+//         app.listen(PORT, () => {
+//             console.log(`Server is running on port ${PORT}`);
+//         });
+//     }
+// )
+// .catch((err) => console.error("Error in connecting to the database", err));
+
 import dotenv from 'dotenv';
+import { app } from './app.js'; // Ensure the correct file extension
 import connectDB from './db/index.js';
 
 dotenv.config({
-    path: './.env'
+    path: './.env',
 });
 
-// Call the connectDB function to connect to the database
-connectDB()
-    .then(() => {
+const PORT = process.env.PORT || 8000;
 
-        console.log('Connected to the database');
-        app.listen(process.env.PORT || 8000, () => {
-            console.log(`Server is running on port ${process.env.PORT}`);
+connectDB()
+.then(
+    () => {
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
         });
     }
-    )
-    .catch((error) => {
-        console.log('Error connecting to the database', error);
-    });
+)
+.catch((err) => console.error("Error in connecting to the database", err));

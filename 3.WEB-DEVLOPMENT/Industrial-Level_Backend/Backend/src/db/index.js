@@ -1,4 +1,10 @@
 import mongoose from 'mongoose';
+import { DB_NAME } from './constants.js';
+import dotenv from 'dotenv';
+
+dotenv.config({
+    path: './src/.env',
+});
 
 const connectDB = async () => {
     try {
@@ -6,15 +12,18 @@ const connectDB = async () => {
         if (!uri) {
             throw new Error('MONGODB_URI is not defined in the environment variables');
         }
-        await mongoose.connect(uri, {
+        const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        console.log('MongoDB connected');
-    } catch (error) {
+        console.log(`\n MongoDB connected ! DB host: ${connectionInstance.connection.host}`);
+
+    } 
+    catch (error) {
         console.error('MongoDB connection error:', error);
         process.exit(1);
     }
-};
+}
 
-export default connectDB;
+export default
+connectDB;
