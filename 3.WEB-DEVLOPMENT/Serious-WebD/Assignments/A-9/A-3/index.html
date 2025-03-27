@@ -4,64 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            body {
+                background-image: url('hero-bg.jpg');
+                background-size: cover;
+            }
+        </style>
 </head>
-<body>
+<body class="font-sans">
 
     <!-- Header Section -->
-    <header>
-        <div class="logo">ModernShop</div>
+    <header class="flex justify-between items-center bg-gray-800 text-white p-4 md:p-6">
+        <div class="text-2xl font-bold">ModernShop</div>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="cart">🛒 Cart</a></li>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Shop</a></li>
+                <li><a href="#" class="hover:text-yellow-400">About</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+                <li><a href="#" class="hover:text-yellow-400">🛒 Cart</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Shop the Latest Trends</h1>
-        <p>Find the best fashion, accessories, and more at unbeatable prices.</p>
-        <a href="#" class="btn">Shop Now</a>
+    <section class="text-center bg-cover bg-center text-white py-20 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Shop the Latest Trends</h1>
+        <p class="text-lg md:text-xl mb-6">Find the best fashion, accessories, and more at unbeatable prices.</p>
+        <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded">Shop Now</a>
     </section>
 
     <!-- Product Section -->
-    <section class="products">
-        <h2>Featured Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="product1.jpg" alt="Product 1">
-                <h3>Trendy Jacket</h3>
-                <p>$49.99</p>
-                <a href="#" class="btn">Add to Cart</a>
+    <section class="text-center py-16 px-4">
+        <h2 class="text-3xl font-bold mb-8">Featured Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div class="bg-gray-100 p-4 rounded-lg shadow-lg hover:scale-105 transition">
+                <img src="product1.jpg" alt="Product 1" class="w-full rounded">
+                <h3 class="text-lg font-semibold mt-3">Trendy Jacket</h3>
+                <p class="text-gray-700">$49.99</p>
+                <a href="#" class="block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded mt-3">Add to Cart</a>
             </div>
-            <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <h3>Stylish Sneakers</h3>
-                <p>$79.99</p>
-                <a href="#" class="btn">Add to Cart</a>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-lg hover:scale-105 transition">
+                <img src="product2.jpg" alt="Product 2" class="w-full rounded">
+                <h3 class="text-lg font-semibold mt-3">Stylish Sneakers</h3>
+                <p class="text-gray-700">$79.99</p>
+                <a href="#" class="block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded mt-3">Add to Cart</a>
             </div>
-            <div class="product">
-                <img src="product3.jpg" alt="Product 3">
-                <h3>Elegant Watch</h3>
-                <p>$99.99</p>
-                <a href="#" class="btn">Add to Cart</a>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-lg hover:scale-105 transition">
+                <img src="product3.jpg" alt="Product 3" class="w-full rounded">
+                <h3 class="text-lg font-semibold mt-3">Elegant Watch</h3>
+                <p class="text-gray-700">$99.99</p>
+                <a href="#" class="block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded mt-3">Add to Cart</a>
             </div>
-            <div class="product">
-                <img src="product4.jpg" alt="Product 4">
-                <h3>Casual T-Shirt</h3>
-                <p>$19.99</p>
-                <a href="#" class="btn">Add to Cart</a>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-lg hover:scale-105 transition">
+                <img src="product4.jpg" alt="Product 4" class="w-full rounded">
+                <h3 class="text-lg font-semibold mt-3">Casual T-Shirt</h3>
+                <p class="text-gray-700">$19.99</p>
+                <a href="#" class="block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded mt-3">Add to Cart</a>
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer>
+    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
         <p>&copy; 2025 ModernShop. All Rights Reserved.</p>
     </footer>
 

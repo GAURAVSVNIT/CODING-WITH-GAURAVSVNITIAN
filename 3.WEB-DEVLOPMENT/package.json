@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "vite": "^6.2.2"
+    "multer": "^1.4.5-lts.2"
   }
 }
