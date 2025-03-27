@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background: url('WhatsApp\ Image\ 2025-03-20\ at\ 12.54.34_a90a82df.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Hero Section -->
+    <div class="relative h-[65vh] bg-cover bg-center text-white flex flex-col items-center justify-center hero-bg">
+        <div class="hero-content text-center">
+            <h1 class="text-7xl font-extrabold tracking-wide text-red-500">zomato</h1>
+            <p class="mt-2 text-xl font-medium">Discover the best food & drinks in Chennai</p>
+            <div class="mt-6 flex items-center bg-white p-3 rounded-full shadow-lg w-[80%] max-w-lg mx-auto">
+                <input type="text" placeholder="Search for restaurant, cuisine or dish" class="px-4 py-3 w-full text-gray-700 outline-none rounded-xl" />
+                <button class="bg-red-500 px-6 py-3 text-white font-semibold rounded-full hover:bg-red-600 transition">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10 py-10">
+        <div class="bg-white p-5 rounded-xl shadow-lg cursor-pointer hover:shadow-2xl transition transform hover:scale-105">
+            <img src="WhatsApp Image 2025-03-20 at 12.54.32_6a4c6a7d.jpg" alt="Order Food Online" class="w-full h-44 object-cover rounded-md" />
+            <h3 class="mt-4 text-xl font-semibold text-gray-800">Order Food Online</h3>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow-lg cursor-pointer hover:shadow-2xl transition transform hover:scale-105">
+            <img src="WhatsApp Image 2025-03-20 at 12.54.34_cb2b9a05.jpg" alt="Go out for a meal" class="w-full h-44 object-cover rounded-md" />
+            <h3 class="mt-4 text-xl font-semibold text-gray-800">Go out for a meal</h3>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow-lg cursor-pointer hover:shadow-2xl transition transform hover:scale-105">
+            <img src="WhatsApp Image 2025-03-20 at 12.54.34_5462a0a3.jpg" alt="Night Life & Clubs" class="w-full h-44 object-cover rounded-md" />
+            <h3 class="mt-4 text-xl font-semibold text-gray-800">Night Life & Clubs</h3>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow-lg cursor-pointer hover:shadow-2xl transition transform hover:scale-105">
+            <img src="WhatsApp Image 2025-03-20 at 12.54.35_02130b36.jpg" alt="Zomato Pro" class="w-full h-44 object-cover rounded-md" />
+            <h3 class="mt-4 text-xl font-semibold text-gray-800">Zomato Pro</h3>
+        </div>
+    </div>
+<!-- Additional Section -->
+<section class="bg-gray-200 py-10">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Popular Restaurants</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-5 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Restaurant A</h3>
+                <p class="mt-2">Cuisine: Italian</p>
+                <p class="mt-2">Rating: ★★★★☆</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Restaurant B</h3>
+                <p class="mt-2">Cuisine: Indian</p>
+                <p class="mt-2">Rating: ★★★★★</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Restaurant C</h3>
+                <p class="mt-2">Cuisine: Chinese</p>
+                <p class="mt-2">Rating: ★★★☆☆</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-blue-900 text-white text-center p-6 mt-10 w-full">
+    <p class="text-lg font-medium">&copy; 2025 Zomato | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

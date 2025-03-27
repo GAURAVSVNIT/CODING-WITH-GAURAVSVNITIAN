@@ -111,80 +111,21 @@
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 #include <algorithm>
+#include <string>
 
 using namespace std;
 
-class Process {
-public:
-    int processId;
-    int priority;
-    int arrivalTime;
-    int burstTime;
-
-    Process(int pid, int prio, int at, int bt) {
-        processId = pid;
-        priority = prio;
-        arrivalTime = at;
-        burstTime = bt;
+// 
+int main ()
+{
+    if("Manav" < "Gaurav")
+    {
+        cout << "Manav is smaller than Gaurav" << endl;
     }
-};
-
-bool compare(Process a, Process b) {
-    if (a.priority == b.priority) 
-        return a.arrivalTime < b.arrivalTime;
-    return a.priority < b.priority;
-}
-
-void priorityScheduling(vector<Process>& processes) {
-    int n = processes.size();
-    vector<Process> readyQueue;
-    int currentTime = 0;
-
-    
-    for (int i = 0; i < n; i++) {
-        if (processes[i].arrivalTime == 0) {
-            readyQueue.push_back(processes[i]);
-            processes.erase(processes.begin() + i);
-            break;
-        }
-    }
-
-
-    sort(processes.begin(), processes.end(), compare);
-
-    cout << "CPU Scheduling Order:" << endl;
-
-    while (!readyQueue.empty()) {
-        Process currentProcess = readyQueue.front();
-        readyQueue.erase(readyQueue.begin());
-
-        cout << "Process ID: " << currentProcess.processId << " is scheduled at time " << currentTime << "s." << endl;
-        currentTime += currentProcess.burstTime;  
-
-        
-        for (int i = 0; i < processes.size(); i++) {
-            if (processes[i].arrivalTime <= currentTime) {
-                readyQueue.push_back(processes[i]);
-                processes.erase(processes.begin() + i);
-                i--; 
-            }
-        }
-
-        
-        sort(readyQueue.begin(), readyQueue.end(), compare);
-    }
-}
-
-int main() {
-    vector<Process> processes = {
-        Process(1, 2, 0, 5),
-        Process(2, 1, 1, 3),
-        Process(3, 3, 2, 4)
-    };
-
-    priorityScheduling(processes);
-
-    cout<<"\n\n";
-    return 0;
+    else
+    {
+        cout << "Gaurav is smaller than Manav" << endl;
+    }    
 }

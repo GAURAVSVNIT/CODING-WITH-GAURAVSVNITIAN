@@ -47,7 +47,9 @@
 const asyncHandler = (requestHandler) => {
     return (req, res, next) => 
     {
-        Promise.resolve(requestHandler(req, res, next)).catch((err)=>next(err));
+        Promise
+        .resolve(requestHandler(req, res, next))
+        .catch((err)=>next(err));
     }};
 // So this is a simple function that takes a request handler as an argument and returns a function that takes three arguments, request, response, and next. And inside that function, we are resolving the request handler, and we are catching the error if there is any error. And we are passing that error to the next function. So this is a simple asynchronous handler that we can use in our controllers to handle all of our asynchronous requests. So let's see how we can use this asynchronous handler in 
 // our controllers. So let's go to our controllers and see how we can use this asynchronous handler
