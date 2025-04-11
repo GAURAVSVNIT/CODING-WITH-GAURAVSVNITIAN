@@ -1,7 +1,9 @@
 import {v2 as cloudinary} from 'cloudinary';
 import dotenv from 'dotenv';
 import fs from 'fs';
-dotenv.config();
+dotenv.config({
+        path: '../.env',
+    });
 (async function() {
 
     // Configuration
@@ -38,4 +40,22 @@ dotenv.config();
     }
     
     console.log(response);
+
+    // const optimizeUrl = cloudinary.url('sample', { // Replace 'sample' with the actual public ID of your resource
+    //     fetch_format: 'auto',
+    //     quality: 'auto'
+    // });
+    
+    // console.log(optimizeUrl);
+    
+    // // Transform the image: auto-crop to square aspect_ratio
+    // const autoCropUrl = cloudinary.url('shoes', {
+    //     crop: 'auto',
+    //     gravity: 'auto',
+    //     width: 500,
+    //     height: 500,
+    // });
+    
+    // console.log(autoCropUrl);
+
 })();

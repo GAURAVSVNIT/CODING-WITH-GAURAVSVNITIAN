@@ -9,7 +9,7 @@
 // export default router;
 
 import express from 'express';
-import { healthCheck } from '../controllers/healthcheck.controllers.js'; // Ensure the correct file extension
+import { healthCheck } from '../controllers/healthcheck.controller.js'; // Ensure the correct file extension
 
 const router = express.Router();
 

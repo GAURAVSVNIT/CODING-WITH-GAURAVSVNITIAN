@@ -51,4 +51,10 @@ app.use(cookieParser());
 // Routes
 app.use('/api/v1/healthcheck', healthcheckRouter);
 
+
+//routes import
+import userRouter from './routes/user.routes.js'; // Ensure the correct file extension
+
+//routers
+app.use('/api/v1/users', userRouter);
 export { app };

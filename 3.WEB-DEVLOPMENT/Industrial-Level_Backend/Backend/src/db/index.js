@@ -1,14 +1,17 @@
 import mongoose from 'mongoose';
 import { DB_NAME } from './constants.js';
-import dotenv from 'dotenv';
 
-dotenv.config({
-    path: './src/.env',
-});
+
+
+// Log the MongoDB URI for debugging
 
 const connectDB = async () => {
     try {
-        const uri = process.env.MONGODB_URI;
+        mongoose.set('strictQuery', false); // Set strictQuery to false to avoid deprecation warning
+        mongoose.set('debug', true); // Enable Mongoose debug mode for detailed logging 
+        const uri = process.env.MONGODB_URI;  
+        console.log(`MongoDB URI: ${uri}`); // Log the MongoDB URI for debugging
+        
         if (!uri) {
             throw new Error('MONGODB_URI is not defined in the environment variables');
         }

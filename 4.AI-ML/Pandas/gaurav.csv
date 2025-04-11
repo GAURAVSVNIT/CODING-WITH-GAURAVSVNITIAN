@@ -1,0 +1,6 @@
+,Train Number,Train Name,Train Type,Source Station,Destination Station,Departure Time,Arrival Time,Distance (km),Running Days
+0,12001,Shatabdi Express,Superfast,New Delhi,Habibganj,06:00,14:00,500,Mon-Sat
+1,12951,Mumbai Rajdhani,Rajdhani,Mumbai Central,New Delhi,16:25,08:35,1384,Daily
+2,12301,Kolkata Rajdhani,Rajdhani,Howrah,New Delhi,16:55,10:05,1451,Daily
+3,22691,YPR Rajdhani,Rajdhani,Yesvantpur,Hazrat Nizamuddin,20:00,05:30,2367,"Wed, Sun"
+4,11013,Coimbatore Express,Express,Lokmanya Tilak,Coimbatore,10:35,06:30,1514,"Mon, Wed, Fri"
