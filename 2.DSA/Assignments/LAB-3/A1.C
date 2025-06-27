@@ -1,64 +1,74 @@
 // 1. Write a program in C to create and display a Singly link list.
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
-struct Node
-{
+class Node {
+public:
     int data;
-    struct Node *next;
+    Node* next;
+
+    Node(int val) {
+        data = val;
+        next = nullptr;
+    }
 };
 
-void display(struct Node *head)
-{
-    struct Node *temp = head;
-    while (temp != NULL)
-    {
-        printf("%d -> ", temp->data);
-        temp = temp->next;
-    }
-    printf("NULL\n");
-}
+class LinkedList {
+private:
+    Node* head;
 
-Node *createNode(int data)
-{
-    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
-    newNode->data = data;
-    newNode->next = NULL;
-    return newNode;
-}
-
-int main()
-{
-    int n;
-    printf("Enter the Number  of node : ");
-    scanf("%d", &n);
-
-    int *data = (int *)malloc(n * sizeof(int));
-    for (int i = 0; i < n; i++)
-    {
-        printf("Enter the value of node %d: ", i + 1);
-        scanf("%d", &data[i]);
+public:
+    LinkedList() {
+        head = nullptr;
     }
 
-    struct Node *head = NULL;
-    struct Node *temp = NULL;
-    for (int i = 0; i < n; i++)
-    {
-        if (head == NULL)
-        {
-            head = createNode(data[i]);
-            temp = head;
+    void append(int val) {
+        Node* newNode = new Node(val);
+        if (head == nullptr) {
+            head = newNode;
+        } else {
+            Node* temp = head;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            temp->next = newNode;
         }
-        else
-        {
-            temp->next = createNode(data[i]);
+    }
+
+    void display() {
+        Node* temp = head;
+        while (temp != nullptr) {
+            cout << temp->data << " -> ";
             temp = temp->next;
         }
+        cout << "NULL" << endl;
     }
-    
-    printf("The linked list is: ");
-    display(head);
-    free(data);
+
+    ~LinkedList() {
+        Node* temp;
+        while (head != nullptr) {
+            temp = head;
+            head = head->next;
+            delete temp;
+        }
+    }
+};
+
+int main() {
+    int n;
+    cout << "Enter the number of nodes: ";
+    cin >> n;
+
+    LinkedList list;
+    for (int i = 0; i < n; ++i) {
+        int value;
+        cout << "Enter value for node " << i + 1 << ": ";
+        cin >> value;
+        list.append(value);
+    }
+
+    cout << "The linked list is: ";
+    list.display();
+
     return 0;
 }

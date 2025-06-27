@@ -1,15 +1,15 @@
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// class Node {
-// public:
-//     int data;
-//     Node* next;
-//     Node(int data) {
-//         this->data = data;
-//         this->next = NULL;
-//     }
-// };
+class Node {
+public:
+    int data;
+    Node* next;
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
+    }
+};
 
 // class Stack {
 // private:
@@ -120,3 +120,63 @@
 
 
 
+class Stack  {
+    private:
+        Node* top;
+    public:
+     Stack() {
+        top = NULL;
+     };
+     void push(int val)
+     {
+        Node* n = new Node(val);
+        if (top == NULL) {
+            top = n;
+        } else {
+            n->next = top;
+            top = n;
+        }
+     }
+        void pop()
+        {
+            if (top == NULL) {
+                cout << "Stack is empty." << endl;
+                return;
+            }
+            Node* temp = top;
+            top = top->next;
+            delete temp;
+        };
+
+        int peek()
+        {
+            if(top == NULL)
+            {
+                cout<<"Stack is empty."<<endl;
+                return -1;
+            }
+            else
+            {
+                return top->data;
+            }
+        }
+
+        bool isEmpty()
+        {
+            return top == NULL;
+        }
+
+        void display()
+        {
+            if (top == NULL) {
+                cout << "Stack is empty." << endl;
+                return;
+            }
+            Node* temp = top;
+            while (temp != NULL) {
+                cout << temp->data << " ";
+                temp = temp->next;
+            }
+            cout << endl;
+        };  
+};
