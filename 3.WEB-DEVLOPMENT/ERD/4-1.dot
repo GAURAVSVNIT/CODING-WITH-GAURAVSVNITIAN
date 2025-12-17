@@ -1,0 +1,32 @@
+graph MedicalSystem {
+    node [shape=record, fontname=Helvetica];
+
+    Patient [label="{ PATIENT | <pk> ssn\l name\l address\l age\l }"];
+    Doctor [label="{ DOCTOR | <pk> ssn\l name\l specialty\l years_experience\l }"];
+    Prescription [label="{ PRESCRIPTION | <pk> prescription_id\l date\l quantity\l }"];
+    PharmaCompany [label="{ PHARMA_COMPANY | <pk> name\l phone\l }"];
+    Contract [label="{ CONTRACT | <pk> contract_id\l start_date\l end_date\l text\l supervisor\l }"];
+    Pharmacy [label="{ PHARMACY | <pk> pharmacy_name\l address\l phone\l }"];
+    Drug [label="{ DRUG | <pk> trade_name\l formula\l }"];
+
+    "has_primary" [shape=diamond, label="has primary"];
+    "treats" [shape=diamond, label="treats"];
+    "receives" [shape=diamond, label="receives"];
+    "writes" [shape=diamond, label="writes"];
+    "is_for" [shape=diamond, label="is for"];
+    "signs1" [shape=diamond, label="signs"];
+    "signs2" [shape=diamond, label="signs"];
+    "produces" [shape=diamond, label="produces"];
+    "sells" [shape=diamond, label="sells with price"];
+
+    Patient -- "has_primary" -- Doctor;
+    Patient -- "treats" -- Doctor;
+    Patient -- "receives" -- Prescription;
+    Doctor -- "writes" -- Prescription;
+    Prescription -- "is_for" -- Drug;
+
+    PharmaCompany -- "signs1" -- Contract;
+    Contract -- "signs2" -- Pharmacy;
+    PharmaCompany -- "produces" -- Drug;
+    Pharmacy -- "sells" -- Drug;
+}

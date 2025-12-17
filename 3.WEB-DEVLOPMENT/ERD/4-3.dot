@@ -1,0 +1,27 @@
+graph CarServiceSystem {
+    node [shape=record, fontname=Helvetica];
+
+    Customer [label="{ CUSTOMER | <pk> customer_id\l name\l contact_info\l }"];
+    Salesperson [label="{ SALESPERSON | <pk> salesperson_id\l name\l }"];
+    Invoice [label="{ INVOICE | <pk> invoice_id\l sale_date\l }"];
+    Car [label="{ CAR | <pk> serial_number\l model\l condition\l }"];
+    ServiceTicket [label="{ SERVICE_TICKET | <pk> ticket_id\l service_date\l }"];
+    Part [label="{ PART | <pk> part_id\l part_name\l description\l }"];
+    Mechanic [label="{ MECHANIC | <pk> mechanic_id\l name\l }"];
+
+    "receives" [shape=diamond, label="receives"];
+    "writes" [shape=diamond, label="writes"];
+    "for" [shape=diamond, label="for"];
+    "has" [shape=diamond, label="has"];
+    "requests" [shape=diamond, label="requests"];
+    "may_require" [shape=diamond, label="may require"];
+    "worked_on_by" [shape=diamond, label="worked on by"];
+
+    Customer -- "receives" -- Invoice;
+    Salesperson -- "writes" -- Invoice;
+    Invoice -- "for" -- Car;
+    Car -- "has" -- ServiceTicket;
+    Customer -- "requests" -- ServiceTicket;
+    ServiceTicket -- "may_require" -- Part;
+    ServiceTicket -- "worked_on_by" -- Mechanic;
+}

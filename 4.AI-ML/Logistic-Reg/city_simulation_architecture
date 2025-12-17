@@ -1,0 +1,39 @@
+// Modular City Simulation - OOP Architecture
+digraph {
+	SIM [label="Simulation Core
+(C++)"]
+	CIT [label="Citizen Module
+(Objects + AI Behavior Trees)"]
+	BLD [label="Building Module
+(Residential, Commercial, Industrial)"]
+	ECO [label="Economy Module
+(Resource flow, pricing)"]
+	TRN [label="Transportation Module
+(Roads, Vehicles)"]
+	EVT [label="Event/Disaster System
+(Random + User-triggered)"]
+	GEN [label="Procedural Generator
+(City Layout, Roads, Districts)"]
+	API [label="API Layer
+(WebSocket/REST)"]
+	DB [label="PostgreSQL
+(Historical Data)"]
+	CACHE [label="Redis
+(Live Events Cache)"]
+	DASH [label="React/Next.js Dashboard
+(Visualization & Control)"]
+	SIM -> CIT
+	SIM -> BLD
+	SIM -> ECO
+	SIM -> TRN
+	SIM -> EVT
+	GEN -> SIM [label="Procedural Setup"]
+	ECO -> BLD [label="Resource Demand/Supply"]
+	CIT -> ECO [label="Spending/Income"]
+	TRN -> CIT [label="Movement/Commute"]
+	API -> SIM [label="Commands / Updates"]
+	SIM -> API [label="State Data"]
+	API -> DB [label="Persist Data"]
+	API -> CACHE [label="Live Feed"]
+	DASH -> API [label="User Input / View"]
+}

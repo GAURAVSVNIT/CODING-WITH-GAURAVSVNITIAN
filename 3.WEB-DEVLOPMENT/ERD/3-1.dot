@@ -1,0 +1,17 @@
+graph BookBankManagement {
+    node [shape=record, fontname=Helvetica];
+
+    Student [label="{ STUDENT | <pk> student_id\l name\l department\l year\l }"];
+    Book [label="{ BOOK | <pk> isbn\l title\l publisher\l year\l price\l copies\l }"];
+    Author [label="{ AUTHOR | <pk> author_id\l name\l }"];
+    Transaction [label="{ TRANSACTION | <pk> transaction_id\l issue_date\l due_date\l return_date\l penalty\l }"];
+
+    "makes" [shape=diamond, label="makes"];
+    "involves" [shape=diamond, label="involves"];
+    "written_by" [shape=diamond, label="written by"];
+
+    Student -- "makes" -- Transaction;
+    Transaction -- "involves" -- Book;
+    Book -- "written_by" -- Author;
+}
+

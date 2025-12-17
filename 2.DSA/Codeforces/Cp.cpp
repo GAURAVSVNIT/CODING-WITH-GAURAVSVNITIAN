@@ -1,54 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+void z0() {
+    int x9;
+    cin >> x9;
 
-    int T;
-    cin >> T;
-    while (T--) {
-        int n;
-        cin >> n;
-        vector<int> a(n);
-        for (int &x : a) cin >> x;
+    long long t1 = 0;
+    long long z2 = 0, o3 = 0, b4 = 0;
 
-        // tot[x] = how many times x appears in the suffix (initially the whole array)
-        unordered_map<int,int> tot;
-        for (int x : a) tot[x]++;
+    vector<long long> v5(x9), v6(x9), v7(x9), v8(x9);
+    for (int i = 0; i < x9; ++i) {
+        cin >> v5[i] >> v6[i] >> v7[i] >> v8[i];
+    }
 
-        // pref[x] = how many times x appears in the current segment prefix
-        unordered_map<int,int> pref;
-        int distinct_in_pref = 0;     // number of distinct in prefix
-        int distinct_in_suffix = tot.size(); // number of distinct still remaining
-        int segments = 0;
-
-        for (int i = 0; i < n; i++) {
-            int x = a[i];
-            // Move a[i] from suffix to prefix
-            if (pref[x] == 0) distinct_in_pref++;
-            pref[x]++;
-
-            if (--tot[x] == 0) {
-                distinct_in_suffix--;
-            }
-
-            // If every element we've seen so far (distinct_in_pref)
-            // still lives in the suffix (distinct_in_suffix >= distinct_in_pref),
-            // we can cut here.
-            if (distinct_in_suffix >= distinct_in_pref) {
-                segments++;
-                pref.clear();
-                distinct_in_pref = 0;
-                // Recompute distinct_in_suffix as size of tot with tot[x]>0:
-                distinct_in_suffix = 0;
-                for (auto &kv : tot) 
-                    if (kv.second > 0) 
-                        distinct_in_suffix++;
-            }
+    for (int i = 0; i < x9; ++i) {
+        if (v5[i] > v7[i]) {
+            z2 += v5[i] - v7[i];
         }
+        if (v6[i] > v8[i]) {
+            o3 += v6[i] - v8[i];
+            b4 += min(v5[i], v7[i]);
+        }
+    }
 
-        cout << segments << "\n";
+    t1 = z2 + o3 + b4;
+    cout << t1 << endl;
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t0;
+    cin >> t0;
+    while (t0--) {
+        z0();
     }
 
     return 0;

@@ -1,0 +1,20 @@
+graph NHL {
+  node [shape=record, fontname=Helvetica];
+
+  Team [label="{ TEAM | team_id\l name\l city\l coach\l }"];
+  Player [label="{ PLAYER | player_id\l name\l position\l skill_level\l team_id (FK)\l }"];
+  Injury [label="{ INJURY | injury_id\l description\l injury_date\l player_id (FK)\l }"];
+  Game [label="{ GAME | game_id\l date\l score\l host_team_id (FK)\l guest_team_id (FK)\l }"];
+
+  "host" [shape=diamond, label="host"];
+  "guest" [shape=diamond, label="guest"];
+  "has_player" [shape=diamond, label="has"];
+  "captain" [shape=diamond, label="captain"];
+  "has_injury" [shape=diamond, label="has"];
+
+  Team -- "host" -- Game;
+  Team -- "guest" -- Game;
+  Team -- "has_player" -- Player;
+  Team -- "captain" -- Player;
+  Player -- "has_injury" -- Injury;
+}

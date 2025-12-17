@@ -1,0 +1,13 @@
+graph ProductComponentSupplier {
+    node [shape=record, fontname=Helvetica];
+
+    Product [label="{ PRODUCT | <pk> product_id\l product_name\l quantity_on_hand\l }"];
+    Component [label="{ COMPONENT | <pk> component_id\l name\l description\l }"];
+    Supplier [label="{ SUPPLIER | <pk> supplier_id\l supplier_name\l contact_info\l }"];
+
+    "is_made_of" [shape=diamond, label="is made of"];
+    "is_supplied_by" [shape=diamond, label="is supplied by"];
+
+    Product -- "is_made_of" -- Component;
+    Component -- "is_supplied_by" -- Supplier;
+}
